@@ -1,9 +1,146 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Project</title>
+  </head>
+  <body>
+    <div class="guitar-container">
+      <div class="nut">
+        <div class="note nut-string e-note"><span>E</span></div>
+        <div class="note nut-string b-note"><span>B</span></div>
+        <div class="note nut-string g-note"><span>G</span></div>
+        <div class="note nut-string d-note"><span>D</span></div>
+        <div class="note nut-string a-note"><span>A</span></div>
+        <div class="note nut-string e-note"><span>E</span></div>
+      </div>
+      <div class="fretboard">
+        <div class="frets">
+          <div class="fret" id="fret-1" data-fret-number="1">
+            <div class="note f-note"><span>F</span></div>
+            <div class="note c-note"><span>C</span></div>
+            <div class="note"><span>G#</span></div>
+            <div class="note"><span>D#</span></div>
+            <div class="note"><span>A#</span></div>
+            <div class="note f-note"><span>F</span></div>
+          </div>
+          <div class="fret" id="fret-2" data-fret-number="2">
+            <div class="note"><span>F# </span></div>
+            <div class="note"><span>C#</span></div>
+            <div class="note a-note"><span>A</span></div>
+            <div class="note e-note"><span>E</span></div>
+            <div class="note b-note"><span>B</span></div>
+            <div class="note"><span>F#</span></div>
+          </div>
+          <div class="fret" id="fret-3" data-fret-number="3">
+            <div class="note g-note"><span>G</span></div>
+            <div class="note d-note"><span>D</span></div>
+            <div class="note"><span>A#</span></div>
+            <div class="note f-note"><span>F</span></div>
+            <div class="note c-note"><span>C</span></div>
+            <div class="note g-note"><span>G</span></div>
+          </div>
+          <div class="fret" id="fret-4" data-fret-number="4">
+            <div class="note"><span>G#</span></div>
+            <div class="note"><span>D#</span></div>
+            <div class="note b-note"><span>B</span></div>
+            <div class="note"><span>F#</span></div>
+            <div class="note"><span>C#</span></div>
+            <div class="note"><span>G#</span></div>
+          </div>
+          <div class="fret" id="fret-5" data-fret-number="5">
+            <div class="note a-note"><span>A</span></div>
+            <div class="note e-note"><span>E</span></div>
+            <div class="note c-note"><span>C</span></div>
+            <div class="note g-note"><span>G</span></div>
+            <div class="note d-note"><span>D</span></div>
+            <div class="note a-note"><span>A</span></div>
+          </div>
+          <div class="fret" id="fret-6" data-fret-number="6">
+            <div class="note"><span>A#</span></div>
+            <div class="note f-note"><span>F</span></div>
+            <div class="note"><span>C#</span></div>
+            <div class="note"><span>G#</span></div>
+            <div class="note"><span>D#</span></div>
+            <div class="note"><span>A#</span></div>
+          </div>
+          <div class="fret" id="fret-7" data-fret-number="7">
+            <div class="note b-note"><span>B</span></div>
+            <div class="note"><span>F#</span></div>
+            <div class="note d-note"><span>D</span></div>
+            <div class="note a-note"><span>A</span></div>
+            <div class="note e-note"><span>E</span></div>
+            <div class="note b-note"><span>B</span></div>
+          </div>
+          <div class="fret" id="fret-8" data-fret-number="8">
+            <div class="note c-note"><span>C</span></div>
+            <div class="note g-note"><span>G</span></div>
+            <div class="note"><span>D#</span></div>
+            <div class="note"><span>A#</span></div>
+            <div class="note f-note"><span>F</span></div>
+            <div class="note c-note"><span>C</span></div>
+          </div>
+          <div class="fret" id="fret-9" data-fret-number="9">
+            <div class="note"><span>C#</span></div>
+            <div class="note"><span>G#</span></div>
+            <div class="note e-note"><span>E</span></div>
+            <div class="note b-note"><span>B</span></div>
+            <div class="note"><span>F#</span></div>
+            <div class="note"><span>C#</span></div>
+          </div>
+          <div class="fret" id="fret-10" data-fret-number="10">
+            <div class="note d-note"><span>D</span></div>
+            <div class="note a-note"><span>A</span></div>
+            <div class="note f-note"><span>F</span></div>
+            <div class="note c-note"><span>C</span></div>
+            <div class="note g-note"><span>G</span></div>
+            <div class="note d-note"><span>D</span></div>
+          </div>
+          <div class="fret" id="fret-11" data-fret-number="11">
+            <div class="note"><span>D#</span></div>
+            <div class="note"><span>A#</span></div>
+            <div class="note"><span>F#</span></div>
+            <div class="note"><span>C#</span></div>
+            <div class="note"><span>G#</span></div>
+            <div class="note"><span>D#</span></div>
+          </div>
+          <div class="fret" id="fret-12" data-fret-number="12">
+            <div class="note e-note"><span>E</span></div>
+            <div class="note b-note"><span>B</span></div>
+            <div class="note g-note"><span>G</span></div>
+            <div class="note d-note"><span>D</span></div>
+            <div class="note a-note"><span>A</span></div>
+            <div class="note e-note"><span>E</span></div>
+          </div>
+          <div class="fret" id="fret-13" data-fret-number="13">
+            <div class="note f-note"><span>F</span></div>
+            <div class="note c-note"><span>C</span></div>
+            <div class="note"><span>G#</span></div>
+            <div class="note"><span>D#</span></div>
+            <div class="note"><span>A#</span></div>
+            <div class="note f-note"><span>F</span></div>
+          </div>
+        </div>
+        <div class="strings">
+          <div class="string" id="string-1"></div>
+          <div class="string" id="string-2"></div>
+          <div class="string" id="string-3"></div>
+          <div class="string" id="string-4"></div>
+          <div class="string" id="string-5"></div>
+          <div class="string" id="string-6"></div>
+        </div>
+      </div>
+    </div>
 
-<body>
-  <h1>Jon Hanzelka</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

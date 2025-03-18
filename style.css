@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --guitar-height: 350px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #105160; /* fallback for old browsers */
+
+  background-size: 100% 100%;
+
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.guitar-container {
+  display: flex;
+  flex-direction: row;
+  background: rgb(223, 223, 223);
+  background: linear-gradient(
+    180deg,
+    rgba(223, 223, 223, 1) 0%,
+    rgba(156, 156, 156, 1) 2%,
+    rgba(200, 200, 200, 1) 50%,
+    rgba(170, 171, 173, 1) 98%,
+    rgba(41, 46, 54, 1) 100%
+  );
+  height: var(--guitar-height);
+  width: 100vw;
+  color: white;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+    rgba(17, 17, 26, 0.4) 0px 16px 56px, rgba(17, 17, 26, 0.4) 0px 24px 80px;
+  border-top: 3px solid #b4b4b4;
+  border-bottom: 3px solid #1a1a1a;
+  /* overflow: hidden; */
+}
+
+.fretboard {
+  position: relative;
+  width: 100%;
+}
+
+.frets {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fret {
+  flex: 1;
+  margin-right: 4px;
+  display: flex;
+  background: rgb(56, 60, 64);
+  background: linear-gradient(0deg, #4b3433 0%, #765048 50%, #4b3433 100%);
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: rgb(0, 0, 0) 0px 0px 30px -10px inset;
+  border-right: 2px solid #fff;
+}
+
+.fret::before {
+  content: attr(data-fret-number);
+  position: absolute;
+  bottom: -40px;
+  font-weight: bold;
+  color: #52c0aa;
+}
+
+.nut {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(40, 40, 40);
+  width: 60px;
+  box-shadow: rgba(0, 0, 0, 0.75) 1px 0px 20px 1px;
+  z-index: 50;
+}
+
+.strings {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.string {
+  background: rgb(152, 152, 152);
+  background: linear-gradient(0deg, #373737 0%, #dddddd 70%, #929292 100%);
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 14px 28px, rgba(0, 0, 0, 0.5) 0px 10px 10px;
+}
+
+#string-1 {
+  height: 2px;
+  transform: translateY(50%);
+}
+
+#string-2 {
+  height: 3px;
+  transform: translateY(50%);
+}
+
+#string-3 {
+  height: 4px;
+  transform: translateY(50%);
+}
+
+#string-4 {
+  height: 5px;
+  transform: translateY(50%);
+}
+
+#string-5 {
+  height: 6px;
+  transform: translateY(50%);
+}
+
+#string-6 {
+  height: 7px;
+  transform: translateY(50%);
+}
+
+.note {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 3px solid #202020;
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.nut-string {
+  background-color: #000;
+  border-color: #000;
+  height: 35px;
+  width: 35px;
+  border-radius: 25%;
+}
+
+.note span {
+  color: #fff;
+}
+
+.note:hover {
+  border-color: #c3c3c3;
+  font-weight: bold;
+}
+
+.note.clicked {
+  animation: growAnim 0.4s ease;
+}
+
+@keyframes growAnim {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.note.a-note-active {
+  background-color: rgba(41, 154, 136, 0.85);
+  border-color: #fff;
+  box-shadow: rgba(41, 154, 136, 0.25) 0px 14px 28px,
+    rgba(41, 154, 136, 0.22) 0px 10px 10px;
+}
+
+.note.b-note-active {
+  background-color: rgba(159, 220, 19, 0.85);
+  border-color: #fff;
+  box-shadow: rgba(159, 220, 19, 0.25) 0px 14px 28px,
+    rgba(159, 220, 19, 0.22) 0px 10px 10px;
+}
+
+.note.c-note-active {
+  background-color: rgba(254, 242, 0, 0.85);
+  border-color: #fff;
+  box-shadow: rgba(254, 242, 0, 0.25) 0px 14px 28px,
+    rgba(254, 242, 0, 0.22) 0px 10px 10px;
+}
+
+.note.c-note-active span {
+  color: #000;
+}
+
+.note.d-note-active {
+  background-color: rgba(238, 146, 36, 0.85);
+  border-color: #fff;
+  box-shadow: rgba(238, 146, 36, 0.25) 0px 14px 28px,
+    rgba(238, 146, 36, 0.22) 0px 10px 10px;
+}
+
+.note.e-note-active {
+  background-color: rgba(229, 73, 74, 0.85);
+  border-color: #fff;
+  box-shadow: rgba(229, 73, 74, 0.25) 0px 14px 28px,
+    rgba(229, 73, 74, 0.22) 0px 10px 10px;
+}
+
+.note.f-note-active {
+  background-color: rgba(182, 75, 153, 0.8);
+  border-color: #fff;
+  box-shadow: rgba(182, 75, 153, 0.25) 0px 14px 28px,
+    rgba(182, 75, 153, 0.22) 0px 10px 10px;
+}
+
+.note.g-note-active {
+  background-color: rgba(82, 81, 235, 0.8);
+  border-color: #fff;
+  box-shadow: rgba(82, 81, 235, 0.25) 0px 14px 28px,
+    rgba(82, 81, 235, 0.22) 0px 10px 10px;
+}
+
+@media (max-width: 700px) {
+  .guitar-container {
+    transform: rotate(90deg);
+    width: 2000px;
+    margin-top: 30px;
+  }
+  .fretboard {
+    min-width: calc(100vh - 30px);
+  }
+
+  .note span {
+    transform: rotate(-90deg);
+  }
+}
