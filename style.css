@@ -10,9 +10,6 @@
 
 body {
   background: #105160; /* fallback for old browsers */
-
-  background-size: 100% 100%;
-
   font-family: "Roboto", sans-serif;
   display: flex;
   align-items: center;
@@ -238,10 +235,10 @@ body {
   .guitar-container {
     transform: rotate(90deg);
     width: 2000px;
-    margin-top: 30px;
+    height: 75vw;
   }
   .fretboard {
-    min-width: calc(100vh - 30px);
+    width: 1200px;
   }
 
   .note span {
