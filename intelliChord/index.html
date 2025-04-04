@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Chord Creator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h2>IntelliChord</h2>
+        <div class="ctrl-container">
+          <div class="custom-select-wrapper">
+            <!-- Chord Root Note -->
+            <select id="chord-note" name="chord-note"></select>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="custom-select-wrapper">
+            <!-- Chord Type -->
+            <select id="chord-type" name="chord-type"></select>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="info-container">
+          <div class="info-header">
+            <h3>About This Chord</h3>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="scroll-wrapper"></div>
+        </div>
+        <div class="chord-name">
+          <h1>D</h1>
+        </div>
+      </div>
+      <div class="guitar-container">
+        <div class="guitar">
+          <div class="fret-numbers">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+          </div>
+          <div class="notes">
+            <!-- Nut -->
+            <div class="note-row nut">
+              <div class="note nut" id="1">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <div class="note nut" id="2">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <div class="note nut" id="3">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <div class="note nut" id="4">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <div class="note nut" id="5">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <div class="note nut" id="6">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </div>
+            <!-- First Fret -->
+            <div class="note-row">
+              <div class="note" id="7"></div>
+              <div class="note" id="8"></div>
+              <div class="note" id="9"></div>
+              <div class="note" id="10"></div>
+              <div class="note" id="11"></div>
+              <div class="note" id="12"></div>
+            </div>
+            <!-- Second Fret -->
+            <div class="note-row">
+              <div class="note" id="13"></div>
+              <div class="note" id="14"></div>
+              <div class="note" id="15"></div>
+              <div class="note" id="16"></div>
+              <div class="note" id="17"></div>
+              <div class="note" id="18"></div>
+            </div>
+            <!-- Third Fret -->
+            <div class="note-row">
+              <div class="note" id="19"></div>
+              <div class="note" id="20"></div>
+              <div class="note" id="21"></div>
+              <div class="note" id="22"></div>
+              <div class="note" id="23"></div>
+              <div class="note" id="24"></div>
+            </div>
+            <!-- Fourth Fret -->
+            <div class="note-row">
+              <div class="note" id="25"></div>
+              <div class="note" id="26"></div>
+              <div class="note" id="27"></div>
+              <div class="note" id="28"></div>
+              <div class="note" id="29"></div>
+              <div class="note" id="30"></div>
+            </div>
+            <!-- Fifth Fret -->
+            <div class="note-row">
+              <div class="note" id="31"></div>
+              <div class="note" id="32"></div>
+              <div class="note" id="33"></div>
+              <div class="note" id="34"></div>
+              <div class="note" id="35"></div>
+              <div class="note" id="36"></div>
+            </div>
+          </div>
+          <div class="fretboard">
+            <div class="strings">
+              <div class="string">
+                <span class="string-label"></span>
+              </div>
+              <div class="string">
+                <span class="string-label"></span>
+              </div>
+              <div class="string">
+                <span class="string-label"></span>
+              </div>
+              <div class="string">
+                <span class="string-label"></span>
+              </div>
+              <div class="string">
+                <span class="string-label"></span>
+              </div>
+              <div class="string">
+                <span class="string-label"></span>
+              </div>
+            </div>
+
+            <div class="frets">
+              <div class="fret"></div>
+              <div class="fret"></div>
+              <div class="fret"></div>
+              <div class="fret"></div>
+              <div class="fret"></div>
+              <div class="fret"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="string-notes-container">
+        <p class="string-note"></p>
+        <p class="string-note"></p>
+        <p class="string-note"></p>
+        <p class="string-note"></p>
+        <p class="string-note"></p>
+        <p class="string-note"></p>
+      </div>
+      <div class="user-notes">
+        <div></div>
+        <button class="info-btn">
+          <i class="fa-solid fa-circle-info close-btn"></i>
+          Learn More
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
