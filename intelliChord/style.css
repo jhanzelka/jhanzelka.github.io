@@ -75,7 +75,7 @@ h2 {
   color: rgb(71, 123, 226);
   width: 100%;
   text-align: center;
-  margin: 20px 0 10px 0;
+  margin: 20px 0 5px 0;
   font-size: 30px;
   font-weight: 900;
 }
@@ -120,7 +120,7 @@ h2 {
 
 .nut-container {
   display: flex;
-  width: 330px;
+  width: calc(var(--master_width) + 30px);
   height: 30px;
   margin-bottom: 10px;
 }
@@ -353,8 +353,8 @@ h2 {
   border-radius: 10px;
 }
 
-/* @media (max-width: 768px) {
-  .container {
-    justify-content: space-between;
+@media (max-width: 375px) {
+  :root {
+    --master_width: 250px;
   }
-} */
+}
