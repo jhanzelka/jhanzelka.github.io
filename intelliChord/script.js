@@ -10,6 +10,7 @@ const chord_noteEl = document.getElementById("chord-note");
 const chord_typeEl = document.getElementById("chord-type");
 const fret_numbers = document.querySelector(".fret-numbers");
 const scroll_wrapper = document.querySelector(".scroll-wrapper");
+const info_icon = document.querySelector(".chord-name i");
 
 // initialize ui
 createChord(chords["A_Major"]);
@@ -33,7 +34,11 @@ chord_noteEl.addEventListener("change", () => {
 });
 
 // event listener for learn more
-info_btn.addEventListener("click", () => {
+// info_btn.addEventListener("click", () => {
+//   info_container.classList.toggle("visible");
+// });
+
+info_icon.addEventListener("click", () => {
   info_container.classList.toggle("visible");
 });
 
