@@ -5,12 +5,12 @@ const string_notes = document.querySelectorAll(".string-note");
 const strings = document.querySelectorAll(".string");
 const chord_nameEl = document.querySelector(".chord-name h1");
 const info_container = document.querySelector(".info-container");
-const info_btn = document.querySelector(".info-btn");
 const chord_noteEl = document.getElementById("chord-note");
 const chord_typeEl = document.getElementById("chord-type");
 const fret_numbers = document.querySelector(".fret-numbers");
 const scroll_wrapper = document.querySelector(".scroll-wrapper");
 const info_icon = document.querySelector(".chord-name i");
+//const info_btn = document.querySelector(".info-btn");
 
 // initialize ui
 createChord(chords["A_Major"]);

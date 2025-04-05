@@ -157,6 +157,47 @@ export const chords = {
   <p>C major is one of the most foundational chords in Western music and is often the first chord learned by beginners on guitar and piano alike.</p>`,
   },
 
+  C_Minor: {
+    chord_name: "C",
+    chord_type: "min",
+    notes: [20, 24, 29, 33, 34],
+    note_names: ["", "C", "G", "C", "D♯", "G"],
+    root: 16,
+    fingers: {
+      20: 1,
+      24: 1,
+      29: 2,
+      33: 3,
+      34: 4,
+    },
+    muted: [1],
+    first_fret: 1,
+    description: `<p>The <strong>C minor</strong> chord is built from the C natural minor scale:</p>
+  <p style="font-weight: bold; text-align: center;">C – <strong>D</strong> – <strong>E♭</strong> – F – <strong>G</strong> – A♭ – B♭</p>
+  <p>It contains the root (C), minor third (E♭), and perfect fifth (G), giving it a rich, dark, and expressive tone.</p>
+  <p>C minor is widely used in classical, cinematic, and modern music to convey emotion, introspection, or dramatic intensity.</p>`
+  },
+
+  C_7: {
+    chord_name: "C",
+    chord_type: "7",
+    notes: [1, 4, 6, 11, 15, 20, 22],
+    note_names: ["E", "C", "E", "B♭", "C", "E"],
+    root: 16,
+    fingers: {
+      11: 1,
+      15: 2,
+      20: 3,
+      22: 4,
+    },
+    muted: [],
+    first_fret: 1,
+    description: `<p>The <strong>C7</strong> chord, also known as C dominant seventh, is built from the C major scale with a lowered seventh:</p>
+  <p style="font-weight: bold; text-align: center;">C – <strong>E</strong> – <strong>G</strong> – A – B – D – <strong>B♭</strong></p>
+  <p>It includes the root (C), major third (E), perfect fifth (G), and minor seventh (B♭), creating a strong, slightly tense sound that wants to resolve.</p>
+  <p>C7 is essential in blues, jazz, and funk, and is commonly used to lead into an F major chord or establish a dominant-to-tonic resolution.</p>`
+  },
+
   D_Major: {
     chord_name: "D",
     chord_type: "maj",
@@ -293,6 +334,24 @@ export const chords = {
   <p>E major is one of the most iconic open chords on guitar, known for its full, rich tone and its use across rock, blues, pop, and classical music.</p>`,
   },
 
+  E_Minor: {
+    chord_name: "E",
+    chord_type: "min",
+    notes: [1, 4, 5, 6, 14, 15],
+    note_names: ["E", "B", "E", "G", "B", "E"],
+    root: 16,
+    fingers: {
+      14: 2,
+      15: 3,
+    },
+    muted: [],
+    first_fret: 1,
+    description: `<p>The <strong>E minor</strong> chord is built from the E natural minor scale:</p>
+  <p style="font-weight: bold; text-align: center;">E – <strong>F♯</strong> – <strong>G</strong> – A – <strong>B</strong> – C – D</p>
+  <p>It includes the root (E), minor third (G), and perfect fifth (B), giving it a dark, mellow, and expressive sound.</p>
+  <p>E minor is one of the most widely used chords in guitar music, known for its emotional depth and presence in genres like folk, rock, metal, and classical.</p>`,
+  },
+
   F_Major: {
     chord_name: "F",
     chord_type: "maj",
@@ -315,6 +374,28 @@ export const chords = {
   <p>On guitar, F major is often played as a barre chord and is known for its rich tone and versatility in pop, classical, and folk music.</p>`,
   },
 
+  F_Minor: {
+    chord_name: "F",
+    chord_type: "min",
+    notes: [7, 10, 11, 12, 20, 21],
+    note_names: ["F", "C", "F", "A♭", "C", "F"],
+    root: 16,
+    fingers: {
+      7: 1,
+      10: 1,
+      11: 1,
+      12: 1,
+      20: 3,
+      21: 4,
+    },
+    muted: [],
+    first_fret: 1,
+    description: `<p>The <strong>F minor</strong> chord is built from the F natural minor scale:</p>
+  <p style="font-weight: bold; text-align: center;">F – <strong>G</strong> – <strong>A♭</strong> – B♭ – <strong>C</strong> – D♭ – E♭</p>
+  <p>It includes the root (F), minor third (A♭), and perfect fifth (C), producing a somber and introspective sound.</p>
+  <p>F minor is often used in emotional and dramatic pieces across classical, cinematic, and alternative music, bringing a moody or melancholic character to chord progressions.</p>`,
+  },
+
   G_Major: {
     chord_name: "G",
     chord_type: "maj",
@@ -333,4 +414,28 @@ export const chords = {
   <p>It contains the root (G), the major third (B), and the perfect fifth (D), producing a bright, resonant, and uplifting sound.</p>
   <p>G major is one of the most commonly used open chords on guitar, featured in countless pop, country, folk, and rock songs due to its warm and full tone.</p>`,
   },
+
+  G_Minor: {
+    chord_name: "G",
+    chord_type: "min",
+    notes: [19, 22, 23, 24, 32, 33],
+    note_names: ["G", "D", "G", "B♭", "D", "G"],
+    root: 16,
+    fingers: {
+      19: 1,
+      22: 1,
+      23: 1,
+      24: 1,
+      32: 3,
+      33: 4
+    },
+    muted: [],
+    first_fret: 1,
+    description: `<p>The <strong>G minor</strong> chord is built from the G natural minor scale:</p>
+  <p style="font-weight: bold; text-align: center;">G – <strong>A</strong> – <strong>B♭</strong> – C – <strong>D</strong> – E♭ – F</p>
+  <p>It includes the root (G), minor third (B♭), and perfect fifth (D), giving it a serious, dark, and expressive tone.</p>
+  <p>G minor is frequently used in classical, cinematic, and rock music to convey emotional weight, introspection, or dramatic contrast.</p>`,
+  },
 };
+
+
