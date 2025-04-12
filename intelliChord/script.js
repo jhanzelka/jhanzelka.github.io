@@ -13,7 +13,7 @@ const info_icon = document.querySelector(".chord-name i");
 //const info_btn = document.querySelector(".info-btn");
 
 // initialize ui
-createChord(chords["A_Major"]);
+createChord(chords["A_major"]);
 configureNotesSelectionUI();
 getChordTypes("A");
 
@@ -80,7 +80,7 @@ function parseChords(chords) {
     }
 
     // Normalize empty string (used for major chords)
-    const chordType = type || "Major";
+    const chordType = type || "major";
 
     // Add type if it's not already in the list
     if (!noteTypeMap[note].includes(chordType)) {
@@ -117,7 +117,7 @@ function createChord(chord) {
   const chord_description = chord.description;
   const fingers = chord.fingers;
   const first_fret = chord.first_fret;
-  chord_nameEl.innerText = `${chord_name} ${chord_type}`;
+  chord_nameEl.innerHTML = `${chord_name}${chord_type}`;
 
   const activeIds = chord.notes.map((id) => id.toString());
   const muted = chord.muted.map((id) => id.toString());
