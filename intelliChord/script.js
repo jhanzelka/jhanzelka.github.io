@@ -7,25 +7,25 @@ const chord_nameEl = document.querySelector(".chord-name h1");
 const info_container = document.querySelector(".info-container");
 const chord_noteEl = document.getElementById("chord-note");
 const chord_typeEl = document.getElementById("chord-type");
-const fret_numbers = document.querySelector(".fret-numbers");
+const fret_numbers = document.querySelectorAll(".fret-numbers");
 const scroll_wrapper = document.querySelector(".scroll-wrapper");
 const info_icon = document.querySelector(".chord-name i");
-//const info_btn = document.querySelector(".info-btn");
+const shape_left = document.querySelector(".shape-left");
+const shape_right = document.querySelector(".shape-right");
+const shape_select_el = document.querySelector(".shape-select-element");
+
+let currentChord = "";
+let var_num = 0;
 
 // initialize ui
 createChord(chords["A_major"]);
 configureNotesSelectionUI();
 getChordTypes("A");
-
-// DISABLED note event listeners for clicks
-// notes.forEach((note) =>
-//   note.addEventListener("click", () => {
-//     note.classList.toggle("visible");
-//   })
-// );
+setShapeVariationNumber();
 
 // event listeners for change of chord
 chord_noteEl.addEventListener("change", () => {
+  var_num = 0;
   const chord_name_value = chord_noteEl.value;
   getChordTypes(chord_name_value);
   const chord_type_value = chord_typeEl.value;
@@ -33,10 +33,14 @@ chord_noteEl.addEventListener("change", () => {
   createChord(chords[newValue]);
 });
 
-// event listener for learn more
-// info_btn.addEventListener("click", () => {
-//   info_container.classList.toggle("visible");
-// });
+// event listeners for change of chord shape
+shape_left.addEventListener("click", () => {
+  changeShapeVariation("left");
+});
+
+shape_right.addEventListener("click", () => {
+  changeShapeVariation("right");
+});
 
 info_icon.addEventListener("click", () => {
   info_container.classList.toggle("visible");
@@ -51,6 +55,7 @@ chord_typeEl.addEventListener("change", () => {
   const chord_type_value = chord_typeEl.value;
   const newValue = `${chord_name_value}_${chord_type_value}`;
   createChord(chords[newValue]);
+  setShapeVariationNumber();
 });
 
 // set note selection ui based on available chords
@@ -111,16 +116,23 @@ function getChordTypes(UInoteType) {
 
 // Generate the chord on the fretboard
 function createChord(chord) {
+  currentChord = chord;
+  setShapeVariationNumber();
+
+  //constants across chord shape
   const chord_name = chord.chord_name;
   const chord_type = chord.chord_type;
-  const note_names = chord.note_names;
   const chord_description = chord.description;
-  const fingers = chord.fingers;
-  const first_fret = chord.first_fret;
-  chord_nameEl.innerHTML = `${chord_name}${chord_type}`;
 
-  const activeIds = chord.notes.map((id) => id.toString());
-  const muted = chord.muted.map((id) => id.toString());
+  //variable based on var_nem
+  const note_names = chord.variations[var_num].note_names;
+  const fingers = chord.variations[var_num].fingers;
+  const first_fret = chord.variations[var_num].first_fret;
+  const activeIds = chord.variations[var_num].notes.map((id) => id.toString());
+  const muted = chord.variations[var_num].muted.map((id) => id.toString());
+
+  //set chord name header
+  chord_nameEl.innerHTML = `${chord_name}${chord_type}`;
 
   // Assign description text
   const descriptionEl = document.createElement("p");
@@ -133,9 +145,8 @@ function createChord(chord) {
   applyNoteNames(note_names);
 
   //set fret numbers
-  const fretNumEls = fret_numbers.querySelectorAll("p");
-  fretNumEls.forEach((fretNumEl, idx) => {
-    fretNumEl.innerText = idx + 1;
+  fret_numbers.forEach((fretNumEl, idx) => {
+    fretNumEl.innerText = first_fret + idx;
   });
 
   //handle note visiblity and muting
@@ -180,4 +191,24 @@ function applyFingerValues(fingers) {
       noteEl.innerHTML = `<span>${finger_value}</span>`;
     }
   });
+}
+
+function setShapeVariationNumber() {
+  const var_count = currentChord.variations.length;
+  shape_select_el.innerHTML = `Shape <span style="font-weight: bolder; color: #222">${
+    var_num + 1
+  }</span> of <span style="font-weight: bolder; color: #222">${var_count}</span>`;
+}
+
+function changeShapeVariation(direction) {
+  const var_count = currentChord.variations.length;
+
+  if (direction === "left" && var_num > 0) {
+    var_num--;
+  } else if (direction === "right" && var_num < var_count - 1) {
+    var_num++;
+  }
+
+  setShapeVariationNumber();
+  createChord(currentChord);
 }

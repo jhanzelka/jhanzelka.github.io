@@ -75,9 +75,8 @@ h2 {
   color: rgb(71, 123, 226);
   width: 100%;
   text-align: center;
-  margin: 20px 0 5px 0;
+  margin-bottom: 5px;
   font-size: 30px;
-  font-weight: 900;
 }
 
 small {
@@ -100,7 +99,7 @@ small {
   height: 50px;
   align-items: center;
   justify-content: center;
-  margin: 40px 0 10px 0;
+  margin: 30px 0 10px 0;
 }
 
 .chord-name i {
@@ -109,6 +108,26 @@ small {
   font-size: 20px;
   margin-right: 5px;
   transform: translateY(-20px);
+  cursor: pointer;
+}
+
+.shape-select-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20px;
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+.shape-select-element {
+  color: #898989;
+  font-weight: 400;
+}
+
+.shape-select-container i {
+  color: #898989;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -181,10 +200,10 @@ small {
   width: 100%;
 }
 
-.fret:first-child {
+/* .fret:first-child {
   background-color: rgb(0, 0, 0);
   height: 10px;
-}
+} */
 
 .fret {
   background-color: rgb(0, 0, 0);

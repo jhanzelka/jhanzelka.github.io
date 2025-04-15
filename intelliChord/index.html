@@ -11,24 +11,28 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Chord Creator</title>
+    <title>IntelliChord</title>
   </head>
   <body>
     <div class="container">
       <div class="header">
-        <h2>IntelliChord</h2>
+        <h2>
+          <span style="font-weight: 900">Intelli</span
+          ><span style="font-weight: 400">Chord</span>
+        </h2>
         <div class="ctrl-container">
           <div class="custom-select-wrapper">
-            <!-- Chord Root Note -->
+            <!-- Chord Root Note Selector UI -->
             <select id="chord-note" name="chord-note"></select>
             <i class="fa-solid fa-chevron-down"></i>
           </div>
           <div class="custom-select-wrapper">
-            <!-- Chord Type -->
+            <!-- Chord Type Selector UI -->
             <select id="chord-type" name="chord-type"></select>
             <i class="fa-solid fa-chevron-down"></i>
           </div>
         </div>
+        <!-- About this chord UI element -->
         <div class="info-container">
           <div class="info-header">
             <h3>About This Chord</h3>
@@ -40,9 +44,15 @@
 
       <div class="guitar-container">
         <div class="guitar">
+          <!-- Chord Name UI element -->
           <div class="chord-name">
             <i class="fa-solid fa-circle-info close-btn"></i>
             <h1>D</h1>
+          </div>
+          <div class="shape-select-container">
+            <i class="fa-solid fa-chevron-left shape-left"></i>
+            <p class="shape-select-element"></p>
+            <i class="fa-solid fa-chevron-right shape-right"></i>
           </div>
           <div class="nut-container">
             <!-- Nut -->
