@@ -51,6 +51,7 @@ info_container.querySelector("i").addEventListener("click", () => {
 });
 
 chord_typeEl.addEventListener("change", () => {
+  var_num = 0;
   const chord_name_value = chord_noteEl.value;
   const chord_type_value = chord_typeEl.value;
   const newValue = `${chord_name_value}_${chord_type_value}`;
