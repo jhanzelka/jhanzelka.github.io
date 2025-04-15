@@ -10,7 +10,7 @@ export const chords = {
     variations: [
       {
         notes: [2, 6, 15, 16, 17],
-        note_names: ["", "A", "B", "A", "C♯", "E"],
+        note_names: ["", "A", "E", "A", "C♯", "E"],
         fingers: { 15: 1, 16: 2, 17: 3 },
         muted: [1],
         first_fret: 1,
@@ -36,8 +36,8 @@ export const chords = {
     variations: [
       {
         notes: [2, 6, 11, 15, 16],
-        note_names: ["", "A", "B", "A", "C", "E"],
-        fingers: { 11: 3, 15: 1, 16: 2 },
+        note_names: ["", "A", "E", "A", "C", "E"],
+        fingers: { 11: 1, 15: 2, 16: 3 },
         muted: [1],
         first_fret: 1,
       },
@@ -92,6 +92,67 @@ export const chords = {
     ],
   },
 
+  A_maj7: {
+    chord_name: "A",
+    chord_type: "maj7",
+    description: `<p>The <strong>Amaj7</strong> chord, or A major seventh, is built by adding a major seventh interval to the A major triad:</p>
+  <p style="font-weight: bold; text-align: center;">A – <strong>B</strong> – <strong>C♯</strong> – D – E – F♯ – <strong>G♯</strong></p>
+  <p>It contains the root (A), major third (C♯), perfect fifth (E), and major seventh (G♯), resulting in a smooth, elegant, and dreamy sound.</p>
+  <p>Amaj7 is widely used in jazz, soul, R&B, and pop music to bring warmth and emotional complexity to chord progressions.</p>`,
+    variations: [
+      {
+        notes: [2, 6, 10, 15, 17],
+        note_names: ["", "A", "E", "G♯", "C♯", "E"],
+        root: 16,
+        fingers: {
+          10: 1,
+          15: 2,
+          17: 3,
+        },
+        muted: [1],
+        first_fret: 1,
+      },
+    ],
+  },
+
+  A_sus2: {
+    chord_name: "A",
+    chord_type: "sus2",
+    root: 16,
+    description: `<p>The <strong>Asus2</strong> chord is a variation of the A major chord where the third (C♯) is replaced with the second (B), creating a suspended, open sound:</p>
+  <p style="font-weight: bold; text-align: center;">A – <strong>B</strong> – C♯ – D – <strong>E</strong> – F♯ – G♯</p>
+  <p>It includes the root (A), the second (B), and the perfect fifth (E), omitting the third to remove the major/minor quality.</p>
+  <p>Asus2 creates a light, airy, and unresolved feel, often used in acoustic, folk, and pop music to add texture or lead into more grounded chords.</p>`,
+    variations: [
+      {
+        notes: [2, 5, 6, 15, 16],
+        note_names: ["", "A", "E", "A", "B", "E"],
+        fingers: { 15: 2, 16: 3 },
+        muted: [1],
+        first_fret: 1,
+      },
+    ],
+  },
+
+  A_sus4: {
+    chord_name: "A",
+    chord_type: "sus4",
+    root: 16,
+    description: `<p>The <strong>Asus4</strong> chord is a variation of the A major chord where the third (C♯) is replaced with the perfect fourth (D), creating a suspended and unresolved feel:</p>
+  <p style="font-weight: bold; text-align: center;">A – B – C♯ – <strong>D</strong> – <strong>E</strong> – F♯ – G♯</p>
+  <p>It includes the root (A), perfect fourth (D), and perfect fifth (E), omitting the third to suspend the chord’s tonality.</p>
+  <p>Asus4 adds tension and anticipation, and it’s often used in progressions that resolve back to A major or A minor. You’ll hear it in pop, rock, folk, and gospel music.</p>`,
+    variations: [
+      {
+        notes: [2, 6, 15, 16, 23],
+        note_names: ["", "A", "E", "A", "D", "E"],
+        fingers: { 15: 2, 16: 3, 23: 4 },
+        muted: [1],
+        first_fret: 1,
+      },
+    ],
+  },
+
   A_7sus4: {
     chord_name: "A",
     chord_type: `7<small>sus4</small>`,
@@ -138,6 +199,31 @@ export const chords = {
     ],
   },
 
+  A_dim7: {
+    chord_name: "A",
+    chord_type: "dim7",
+
+    description: `<p>The <strong>Adim7</strong> chord, or A diminished seventh, is an intense and unstable chord built by stacking minor thirds on the root:</p>
+  <p style="font-weight: bold; text-align: center;">A – <strong>C</strong> – <strong>D♯</strong> – <strong>F♯</strong></p>
+  <p>It includes the root (A), minor third (C), diminished fifth (D♯), and diminished seventh (F♯), creating a tense and dissonant sound that demands resolution.</p>
+  <p>Adim7 is used frequently in classical and jazz music as a passing or transitional chord, often leading smoothly into major or minor chords by half-step motion.</p>`,
+    variations: [
+      {
+        notes: [2, 9, 11, 16, 18],
+        note_names: ["", "A", "D♯", "A", "C", "F♯"],
+        root: 16,
+        fingers: {
+          9: 1,
+          11: 3,
+          16: 2,
+          18: 4,
+        },
+        muted: [1, 6],
+        first_fret: 1,
+      },
+    ],
+  },
+
   A_aug: {
     chord_name: "A",
     chord_type: "aug",
@@ -162,6 +248,63 @@ export const chords = {
     ],
   },
 
+  A_mMaj7: {
+    chord_name: "A",
+    chord_type: "mMaj7",
+    root: 16,
+    description: `<p>The <strong>AmMaj7</strong> chord, or A minor major seventh, combines the darkness of a minor chord with the tension of a major seventh interval:</p>
+  <p style="font-weight: bold; text-align: center;">A – <strong>C</strong> – D – <strong>E</strong> – F – G – <strong>G♯</strong></p>
+  <p>It includes the root (A), minor third (C), perfect fifth (E), and major seventh (G♯), producing a dramatic and haunting sound.</p>
+  <p>AmMaj7 is often found in jazz, film scores, and progressive music, where it adds mystery, emotional complexity, or a sense of unresolved tension.</p>`,
+    variations: [
+      {
+        notes: [2, 6, 10, 11, 15],
+        note_names: ["", "A", "E", "G♯", "C", "E"],
+        fingers: { 10: 1, 11: 2, 15: 3 },
+        muted: [1],
+        first_fret: 1,
+      },
+    ],
+  },
+
+  A_add9: {
+    chord_name: "A",
+    chord_type: "<small>add9</small>",
+    root: 16,
+    description: `<p>The <strong>Aadd9</strong> chord is based on the A major triad with an added ninth (B), creating a bright and modern sound without altering the chord's core structure:</p>
+  <p style="font-weight: bold; text-align: center;">A – <strong>B</strong> – <strong>C♯</strong> – D – <strong>E</strong> – F♯ – G♯</p>
+  <p>It includes the root (A), major third (C♯), perfect fifth (E), and added ninth (B), offering extra melodic color while maintaining the stability of a major chord.</p>
+  <p>Aadd9 is often used in pop, acoustic, and cinematic music to evoke openness and emotional depth, without the tension of suspended or extended chords.</p>`,
+    variations: [
+      {
+        notes: [2, 6, 15, 17, 28],
+        note_names: ["", "A", "E", "B", "C♯", "E"],
+        fingers: { 15: 1, 17: 2, 28: 4 },
+        muted: [1],
+        first_fret: 1,
+      },
+    ],
+  },
+
+  A_9: {
+    chord_name: "A",
+    chord_type: "9",
+    root: 16,
+    description: `<p>The <strong>A9</strong> chord, or A dominant ninth, builds on the A7 chord by adding the ninth (B) for extra harmonic complexity:</p>
+  <p style="font-weight: bold; text-align: center;">A – <strong>C♯</strong> – <strong>E</strong> – <strong>G</strong> – <strong>B</strong> – D – F♯</p>
+  <p>It includes the root (A), major third (C♯), perfect fifth (E), minor seventh (G), and added ninth (B), creating a funky, jazzy sound full of tension and movement.</p>
+  <p>A9 is widely used in blues, funk, jazz, and R&B, especially in dominant chord progressions where it leads naturally to the D major chord (the IV chord in the key of A).</p>`,
+    variations: [
+      {
+        notes: [2, 6, 15, 17, 24, 28],
+        note_names: ["", "A", "E", "B", "C♯", "G"],
+        fingers: { 15: 1, 17: 1, 24: 2, 28: 3 },
+        muted: [1],
+        first_fret: 1,
+      },
+    ],
+  },
+
   B_major: {
     chord_name: "B",
     chord_type: "maj",
@@ -173,7 +316,7 @@ export const chords = {
     variations: [
       {
         notes: [14, 18, 27, 28, 29],
-        note_names: ["", "B", "F♯", "B", "D♯", "E"],
+        note_names: ["", "B", "F♯", "B", "D♯", "F♯"],
         root: 16,
         fingers: {
           14: 1,
@@ -184,6 +327,21 @@ export const chords = {
         },
         muted: [1],
         first_fret: 1,
+      },
+      {
+        notes: [7, 11, 12, 16, 20, 21],
+        note_names: ["B", "F♯", "B", "D♯", "F♯", "B"],
+        root: 16,
+        fingers: {
+          7: 1,
+          11: 1,
+          12: 1,
+          16: 2,
+          20: 3,
+          21: 4,
+        },
+        muted: [],
+        first_fret: 7,
       },
     ],
   },
@@ -210,6 +368,13 @@ export const chords = {
         },
         muted: [1],
         first_fret: 1,
+      },
+      {
+        notes: [7, 10, 11, 12, 20, 21],
+        note_names: ["B", "F♯", "B", "D", "F♯", "B"],
+        fingers: { 7: 1, 10: 1, 11: 1, 12: 1, 20: 3, 21: 4 },
+        muted: [],
+        first_fret: 7,
       },
     ],
   },
@@ -282,6 +447,21 @@ export const chords = {
         muted: [1],
         first_fret: 1,
       },
+      {
+        notes: [7, 11, 12, 16, 20, 21],
+        note_names: ["C", "G", "C", "B", "G", "C"],
+        root: 16,
+        fingers: {
+          7: 1,
+          11: 1,
+          12: 1,
+          16: 2,
+          20: 3,
+          21: 4,
+        },
+        muted: [],
+        first_fret: 8,
+      },
     ],
   },
 
@@ -307,6 +487,13 @@ export const chords = {
         },
         muted: [1],
         first_fret: 1,
+      },
+      {
+        notes: [7, 10, 11, 12, 20, 21],
+        note_names: ["C", "G", "C", "D♯", "G", "C"],
+        fingers: { 7: 1, 10: 1, 11: 1, 12: 1, 20: 3, 21: 4 },
+        muted: [],
+        first_fret: 8,
       },
     ],
   },
@@ -355,6 +542,21 @@ export const chords = {
         muted: [1, 2],
         first_fret: 1,
       },
+      {
+        notes: [7, 11, 12, 16, 20, 21],
+        note_names: ["D", "A", "D", "F♯", "A", "D"],
+        root: 16,
+        fingers: {
+          7: 1,
+          11: 1,
+          12: 1,
+          16: 2,
+          20: 3,
+          21: 4,
+        },
+        muted: [],
+        first_fret: 10,
+      },
     ],
   },
 
@@ -377,6 +579,13 @@ export const chords = {
         },
         muted: [1, 2],
         first_fret: 1,
+      },
+      {
+        notes: [7, 10, 11, 12, 20, 21],
+        note_names: ["D", "A", "D", "F", "A", "D"],
+        fingers: { 7: 1, 10: 1, 11: 1, 12: 1, 20: 3, 21: 4 },
+        muted: [],
+        first_fret: 10,
       },
     ],
   },
@@ -521,6 +730,28 @@ export const chords = {
       },
     ],
   },
+  E_7: {
+    chord_name: "E",
+    chord_type: "7",
+
+    description: `<p>The <strong>E7</strong> chord, or E dominant seventh, is formed by adding a minor seventh to the E major triad:</p>
+  <p style="font-weight: bold; text-align: center;">E – <strong>G♯</strong> – <strong>B</strong> – C♯ – D♯ – F♯ – <strong>D</strong></p>
+  <p>It includes the root (E), major third (G♯), perfect fifth (B), and minor seventh (D), producing a bright, slightly bluesy tension that wants to resolve.</p>
+  <p>E7 is a staple in blues, rock, and jazz progressions, often used as the V chord in the key of A to create a strong dominant-to-tonic resolution.</p>`,
+    variations: [
+      {
+        notes: [1, 3, 5, 6, 10, 14],
+        note_names: ["E", "B", "D", "G♯", "B", "E"],
+        root: 16,
+        fingers: {
+          10: 1,
+          14: 2,
+        },
+        muted: [],
+        first_fret: 1,
+      },
+    ],
+  },
 
   E_m7: {
     chord_name: "E",
@@ -641,6 +872,21 @@ export const chords = {
         },
         muted: [],
         first_fret: 1,
+      },
+      {
+        notes: [7, 11, 12, 16, 20, 21],
+        note_names: ["G", "D", "G", "B", "D", "G"],
+        root: 16,
+        fingers: {
+          7: 1,
+          11: 1,
+          12: 1,
+          16: 2,
+          20: 3,
+          21: 4,
+        },
+        muted: [],
+        first_fret: 3,
       },
     ],
   },

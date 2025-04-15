@@ -215,7 +215,7 @@ small {
 
 .fret-numbers {
   position: absolute;
-  transform: translateX(-15px);
+  transform: translateX(-25px);
 }
 
 .fret-numbers p {
