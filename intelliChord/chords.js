@@ -67,6 +67,13 @@ export const chords = {
         muted: [1],
         first_fret: 1,
       },
+      {
+        notes: [2, 4, 6, 15, 17],
+        note_names: ["", "A", "E", "G", "C♯", "E"],
+        fingers: { 15: 1, 17: 3 },
+        muted: [1],
+        first_fret: 1,
+      },
     ],
   },
 
@@ -448,6 +455,32 @@ export const chords = {
         first_fret: 1,
       },
       {
+        notes: [4, 6, 11, 15, 19, 20],
+        note_names: ["G", "C", "E", "G", "C", "E"],
+        root: 16,
+        fingers: {
+          11: 1,
+          15: 2,
+          19: 3,
+          20: 4,
+        },
+        muted: [],
+        first_fret: 1,
+      },
+      {
+        notes: [4, 6, 11, 15, 20, 24],
+        note_names: ["", "C", "E", "G", "C", "G"],
+        root: 16,
+        fingers: {
+          11: 1,
+          15: 2,
+          20: 3,
+          24: 4,
+        },
+        muted: [1],
+        first_fret: 1,
+      },
+      {
         notes: [7, 11, 12, 16, 20, 21],
         note_names: ["C", "G", "C", "B", "G", "C"],
         root: 16,
@@ -498,6 +531,30 @@ export const chords = {
     ],
   },
 
+  C_6: {
+    chord_name: "C",
+    chord_type: "6",
+    description: `<p>The <strong>C6</strong> chord, or C major sixth, is formed by adding a major sixth (A) to the standard C major triad:</p>
+  <p style="font-weight: bold; text-align: center;">C – <strong>E</strong> – <strong>G</strong> – A – B – D – F</p>
+  <p>It includes the root (C), major third (E), perfect fifth (G), and major sixth (A), resulting in a warm, jazzy, and subtly nostalgic sound.</p>
+  <p>C6 is often used in jazz, swing, and old-school pop music, and can serve as a tonic or passing chord that adds lightness and sophistication to a progression.</p>`,
+    variations: [
+      {
+        notes: [4, 6, 11, 15, 16, 20],
+        note_names: ["", "C", "E", "A", "C", "E"],
+        root: 16,
+        fingers: {
+          11: 1,
+          15: 2,
+          16: 3,
+          20: 4,
+        },
+        muted: [1],
+        first_fret: 1,
+      },
+    ],
+  },
+
   C_7: {
     chord_name: "C",
     chord_type: "7",
@@ -517,6 +574,122 @@ export const chords = {
           22: 4,
         },
         muted: [],
+        first_fret: 1,
+      },
+    ],
+  },
+
+  C_maj7: {
+    chord_name: "C",
+    chord_type: "maj7",
+    description: `<p>The <strong>Cmaj7</strong> chord, or C major seventh, is built by adding a major seventh to the C major triad, creating a smooth and dreamy harmonic quality:</p>
+  <p style="font-weight: bold; text-align: center;">C – <strong>E</strong> – <strong>G</strong> – A – B – D – <strong>B</strong></p>
+  <p>It includes the root (C), major third (E), perfect fifth (G), and major seventh (B), resulting in a soft, elegant sound that feels both resolved and introspective.</p>
+  <p>Cmaj7 is widely used in jazz, soul, indie, and pop music, and works beautifully in progressions where subtle emotional color is desired without strong dissonance.</p>`,
+    variations: [
+      {
+        notes: [4, 5, 6, 15, 20],
+        note_names: ["", "C", "E", "G", "B", "E"],
+        root: 16,
+        fingers: {
+          15: 2,
+          20: 3,
+        },
+        muted: [1],
+        first_fret: 1,
+      },
+    ],
+  },
+  C_sus2: {
+    chord_name: "C",
+    chord_type: "sus2",
+    description: `<p>The <strong>Csus2</strong> chord is a suspended chord where the major third (E) of the C major triad is replaced by the second (D), creating an open and unresolved sound:</p>
+  <p style="font-weight: bold; text-align: center;">C – <strong>D</strong> – E – F – <strong>G</strong> – A – B</p>
+  <p>It includes the root (C), major second (D), and perfect fifth (G), omitting the third to remove the major or minor identity of the chord.</p>
+  <p>Csus2 is frequently used in pop, folk, and ambient music to create a floating, airy texture, often resolving to C major or C minor for emotional effect.</p>`,
+    variations: [
+      {
+        notes: [3, 4, 11, 20, 24],
+        note_names: ["", "C", "D", "G", "C", "G"],
+        root: 16,
+        fingers: {
+          11: 1,
+          20: 3,
+          24: 4,
+        },
+        muted: [1],
+        first_fret: 1,
+      },
+    ],
+  },
+  C_add9: {
+    chord_name: "C",
+    chord_type: "add9",
+    description: `<p>The <strong>Cadd9</strong> chord is based on the C major triad with an added ninth (D), introducing a fresh, melodic tone while maintaining its major quality:</p>
+  <p style="font-weight: bold; text-align: center;">C – <strong>D</strong> – <strong>E</strong> – F – G – A – B</p>
+  <p>It includes the root (C), major third (E), perfect fifth (G), and added ninth (D), giving it a rich, open, and slightly ethereal character without the complexity of full extended chords.</p>
+  <p>Cadd9 is a favorite in acoustic, pop, and folk music, often used to add harmonic color to progressions involving G, D, and Em chords.</p>`,
+    variations: [
+      {
+        notes: [4, 6, 15, 20, 23],
+        note_names: ["", "C", "E", "G", "D", "E"],
+        root: 16,
+        fingers: {
+          15: 1,
+          20: 2,
+          23: 3,
+        },
+        muted: [1],
+        first_fret: 1,
+      },
+      {
+        notes: [4, 6, 15, 20, 23, 24],
+        note_names: ["", "C", "E", "G", "D", "G"],
+        root: 16,
+        fingers: {
+          15: 1,
+          20: 2,
+          23: 3,
+          24: 4,
+        },
+        muted: [1],
+        first_fret: 1,
+      },
+    ],
+  },
+
+  C_add11: {
+    chord_name: "C",
+    chord_type: "add11",
+    description: `<p>The <strong>Cadd11</strong> chord is based on the C major triad with an added eleventh (F), introducing a suspended, harmonically rich color without altering the core structure:</p>
+  <p style="font-weight: bold; text-align: center;">C – <strong>D</strong> – <strong>E</strong> – <strong>F</strong> – G – A – B</p>
+  <p>It includes the root (C), major third (E), perfect fifth (G), and added eleventh (F), while keeping the third intact — unlike a sus4 chord, which replaces the third.</p>
+  <p>Cadd11 creates a complex, slightly tense texture that adds movement and interest to chord progressions, often used in pop, fusion, and cinematic music for emotional depth.</p>`,
+    variations: [
+      {
+        notes: [4, 11, 12, 15, 20],
+        note_names: ["", "C", "E", "G", "C", "F"],
+        root: 16,
+        fingers: {
+          11: 1,
+          12: 1,
+          15: 2,
+          20: 3,
+        },
+        muted: [1],
+        first_fret: 1,
+      },
+      {
+        notes: [4, 11, 12, 15, 20],
+        note_names: ["", "C", "E", "G", "C", "F"],
+        root: 16,
+        fingers: {
+          11: 1,
+          12: 1,
+          15: 2,
+          20: 3,
+        },
+        muted: [1],
         first_fret: 1,
       },
     ],
