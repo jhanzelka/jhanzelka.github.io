@@ -265,7 +265,7 @@ small {
 }
 
 .note.root {
-  background-color: #f49518;
+  background-color: rgb(71, 123, 226);
 }
 
 .note.nut.visible {
@@ -275,7 +275,7 @@ small {
 
 .note.nut.visible.root {
   background-color: #ffffff;
-  border: 4px solid #f49518;
+  border: 4px solid rgb(71, 123, 226);
 }
 
 .note.nut.visible i {
