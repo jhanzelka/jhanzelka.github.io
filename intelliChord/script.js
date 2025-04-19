@@ -129,9 +129,9 @@ function createChord(chord) {
   const note_names = chord.variations[var_num].note_names;
   const fingers = chord.variations[var_num].fingers;
   const first_fret = chord.variations[var_num].first_fret;
+  const roots = chord.variations[var_num].root.map((id) => id.toString());
   const activeIds = chord.variations[var_num].notes.map((id) => id.toString());
   const muted = chord.variations[var_num].muted.map((id) => id.toString());
-
   //set chord name header
   chord_nameEl.innerHTML = `${chord_name}${chord_type}`;
 
@@ -154,6 +154,7 @@ function createChord(chord) {
   notes.forEach((noteEl) => {
     noteEl.classList.remove("visible");
     noteEl.classList.remove("muted");
+    noteEl.classList.remove("root");
     // noteEl.classList.add("add");
 
     const id = noteEl.id;
@@ -162,6 +163,9 @@ function createChord(chord) {
     } else if (muted.includes(id)) {
       noteEl.classList.add("visible");
       noteEl.classList.add("muted");
+    }
+    if (roots.includes(id)) {
+      noteEl.classList.add("root");
     }
   });
 

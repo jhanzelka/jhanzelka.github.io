@@ -2,7 +2,6 @@ export const chords = {
   A_major: {
     chord_name: "A",
     chord_type: "maj",
-    root: 16,
     description: `<p>The <strong>A major</strong> chord is built from the A major scale, consisting of the notes:</p>
     <p style="font-weight: bold; text-align: center;">A – B – <strong>C♯</strong> – D – <strong>E</strong> – F♯ – G♯</p>
     <p>It includes the root (A), the major third (C♯), and the perfect fifth (E), creating a full and stable sound.</p>
@@ -14,6 +13,7 @@ export const chords = {
         fingers: { 15: 1, 16: 2, 17: 3 },
         muted: [1],
         first_fret: 1,
+        root: [2, 16],
       },
       {
         notes: [7, 11, 12, 16, 20, 21],
@@ -21,6 +21,7 @@ export const chords = {
         fingers: { 7: 1, 11: 1, 12: 1, 16: 2, 20: 3, 21: 4 },
         muted: [],
         first_fret: 5,
+        root: [7, 12, 21],
       },
     ],
   },
@@ -28,7 +29,6 @@ export const chords = {
   A_minor: {
     chord_name: "A",
     chord_type: "min",
-    root: 16,
     description: `<p>The <strong>A minor</strong> chord uses the natural minor scale:</p>
     <p style="font-weight: bold; text-align: center;">A – B – <strong>C</strong> – D – <strong>E</strong> – F – G</p>
     <p>It replaces the major third (C♯) with a minor third (C), giving it a sadder, more reflective sound.</p>
@@ -40,6 +40,7 @@ export const chords = {
         fingers: { 11: 1, 15: 2, 16: 3 },
         muted: [1],
         first_fret: 1,
+        root: [2, 16],
       },
       {
         notes: [7, 10, 11, 12, 20, 21],
@@ -47,6 +48,7 @@ export const chords = {
         fingers: { 7: 1, 10: 1, 11: 1, 12: 1, 20: 3, 21: 4 },
         muted: [],
         first_fret: 5,
+        root: [7, 12, 21],
       },
     ],
   },
@@ -54,7 +56,6 @@ export const chords = {
   A_7: {
     chord_name: "A",
     chord_type: "7",
-    root: 16,
     description: `<p>The <strong>A7</strong> chord, or A dominant seventh, is formed by adding a minor seventh to the A major chord:</p>
     <p style="font-weight: bold; text-align: center;">A – <strong>C♯</strong> – <strong>E</strong> – F♯ – G♯ – B – <strong>G</strong></p>
     <p>It includes the root (A), major third (C♯), perfect fifth (E), and minor seventh (G), producing a strong, soulful tension that resolves naturally to D major.</p>
@@ -66,6 +67,7 @@ export const chords = {
         fingers: { 15: 1, 16: 2, 17: 3, 24: 4 },
         muted: [1],
         first_fret: 1,
+        root: [2, 16],
       },
       {
         notes: [2, 4, 6, 15, 17],
@@ -73,6 +75,7 @@ export const chords = {
         fingers: { 15: 1, 17: 3 },
         muted: [1],
         first_fret: 1,
+        root: [2],
       },
     ],
   },
@@ -88,13 +91,13 @@ export const chords = {
       {
         notes: [2, 4, 6, 11, 15],
         note_names: ["", "A", "E", "G", "C", "E"],
-        root: 16,
         fingers: {
           11: 1,
           15: 2,
         },
         muted: [1],
         first_fret: 1,
+        root: [2],
       },
     ],
   },
@@ -110,7 +113,6 @@ export const chords = {
       {
         notes: [2, 6, 10, 15, 17],
         note_names: ["", "A", "E", "G♯", "C♯", "E"],
-        root: 16,
         fingers: {
           10: 1,
           15: 2,
@@ -118,6 +120,7 @@ export const chords = {
         },
         muted: [1],
         first_fret: 1,
+        root: [2],
       },
     ],
   },
@@ -125,7 +128,6 @@ export const chords = {
   A_sus2: {
     chord_name: "A",
     chord_type: "sus2",
-    root: 16,
     description: `<p>The <strong>Asus2</strong> chord is a variation of the A major chord where the third (C♯) is replaced with the second (B), creating a suspended, open sound:</p>
   <p style="font-weight: bold; text-align: center;">A – <strong>B</strong> – C♯ – D – <strong>E</strong> – F♯ – G♯</p>
   <p>It includes the root (A), the second (B), and the perfect fifth (E), omitting the third to remove the major/minor quality.</p>
@@ -137,6 +139,7 @@ export const chords = {
         fingers: { 15: 2, 16: 3 },
         muted: [1],
         first_fret: 1,
+        root: [2, 16],
       },
     ],
   },
@@ -144,7 +147,6 @@ export const chords = {
   A_sus4: {
     chord_name: "A",
     chord_type: "sus4",
-    root: 16,
     description: `<p>The <strong>Asus4</strong> chord is a variation of the A major chord where the third (C♯) is replaced with the perfect fourth (D), creating a suspended and unresolved feel:</p>
   <p style="font-weight: bold; text-align: center;">A – B – C♯ – <strong>D</strong> – <strong>E</strong> – F♯ – G♯</p>
   <p>It includes the root (A), perfect fourth (D), and perfect fifth (E), omitting the third to suspend the chord’s tonality.</p>
@@ -156,6 +158,7 @@ export const chords = {
         fingers: { 15: 2, 16: 3, 23: 4 },
         muted: [1],
         first_fret: 1,
+        root: [2, 16],
       },
     ],
   },
@@ -171,13 +174,13 @@ export const chords = {
       {
         notes: [2, 4, 6, 15, 23],
         note_names: ["", "A", "E", "G", "D", "E"],
-        root: 16,
         fingers: {
           15: 2,
           23: 3,
         },
         muted: [1],
         first_fret: 1,
+        root: [2],
       },
     ],
   },
@@ -194,7 +197,6 @@ export const chords = {
       {
         notes: [2, 9, 11, 16],
         note_names: ["", "A", "D♯", "A", "C", ""],
-        root: 16,
         fingers: {
           9: 1,
           11: 3,
@@ -202,6 +204,7 @@ export const chords = {
         },
         muted: [1, 6],
         first_fret: 1,
+        root: [2, 16],
       },
     ],
   },
@@ -209,7 +212,6 @@ export const chords = {
   A_dim7: {
     chord_name: "A",
     chord_type: "dim7",
-
     description: `<p>The <strong>Adim7</strong> chord, or A diminished seventh, is an intense and unstable chord built by stacking minor thirds on the root:</p>
   <p style="font-weight: bold; text-align: center;">A – <strong>C</strong> – <strong>D♯</strong> – <strong>F♯</strong></p>
   <p>It includes the root (A), minor third (C), diminished fifth (D♯), and diminished seventh (F♯), creating a tense and dissonant sound that demands resolution.</p>
@@ -218,7 +220,6 @@ export const chords = {
       {
         notes: [2, 9, 11, 16, 18],
         note_names: ["", "A", "D♯", "A", "C", "F♯"],
-        root: 16,
         fingers: {
           9: 1,
           11: 3,
@@ -227,6 +228,7 @@ export const chords = {
         },
         muted: [1, 6],
         first_fret: 1,
+        root: [2, 16],
       },
     ],
   },
@@ -242,7 +244,6 @@ export const chords = {
       {
         notes: [2, 12, 16, 17, 21],
         note_names: ["", "A", "F", "A", "C♯", "F"],
-        root: 16,
         fingers: {
           12: 1,
           16: 2,
@@ -251,6 +252,7 @@ export const chords = {
         },
         muted: [1],
         first_fret: 1,
+        root: [2, 16],
       },
     ],
   },
@@ -258,7 +260,6 @@ export const chords = {
   A_mMaj7: {
     chord_name: "A",
     chord_type: "mMaj7",
-    root: 16,
     description: `<p>The <strong>AmMaj7</strong> chord, or A minor major seventh, combines the darkness of a minor chord with the tension of a major seventh interval:</p>
   <p style="font-weight: bold; text-align: center;">A – <strong>C</strong> – D – <strong>E</strong> – F – G – <strong>G♯</strong></p>
   <p>It includes the root (A), minor third (C), perfect fifth (E), and major seventh (G♯), producing a dramatic and haunting sound.</p>
@@ -270,6 +271,7 @@ export const chords = {
         fingers: { 10: 1, 11: 2, 15: 3 },
         muted: [1],
         first_fret: 1,
+        root: [2],
       },
     ],
   },
@@ -277,7 +279,6 @@ export const chords = {
   A_add9: {
     chord_name: "A",
     chord_type: "<small>add9</small>",
-    root: 16,
     description: `<p>The <strong>Aadd9</strong> chord is based on the A major triad with an added ninth (B), creating a bright and modern sound without altering the chord's core structure:</p>
   <p style="font-weight: bold; text-align: center;">A – <strong>B</strong> – <strong>C♯</strong> – D – <strong>E</strong> – F♯ – G♯</p>
   <p>It includes the root (A), major third (C♯), perfect fifth (E), and added ninth (B), offering extra melodic color while maintaining the stability of a major chord.</p>
@@ -289,6 +290,7 @@ export const chords = {
         fingers: { 15: 1, 17: 2, 28: 4 },
         muted: [1],
         first_fret: 1,
+        root: [2],
       },
     ],
   },
@@ -296,7 +298,6 @@ export const chords = {
   A_9: {
     chord_name: "A",
     chord_type: "9",
-    root: 16,
     description: `<p>The <strong>A9</strong> chord, or A dominant ninth, builds on the A7 chord by adding the ninth (B) for extra harmonic complexity:</p>
   <p style="font-weight: bold; text-align: center;">A – <strong>C♯</strong> – <strong>E</strong> – <strong>G</strong> – <strong>B</strong> – D – F♯</p>
   <p>It includes the root (A), major third (C♯), perfect fifth (E), minor seventh (G), and added ninth (B), creating a funky, jazzy sound full of tension and movement.</p>
@@ -308,6 +309,7 @@ export const chords = {
         fingers: { 15: 1, 17: 1, 24: 2, 28: 3 },
         muted: [1],
         first_fret: 1,
+        root: [2],
       },
     ],
   },
@@ -315,7 +317,6 @@ export const chords = {
   B_major: {
     chord_name: "B",
     chord_type: "maj",
-
     description: `<p>The <strong>B major</strong> chord is built from the B major scale:</p>
   <p style="font-weight: bold; text-align: center;">B – C♯ – <strong>D♯</strong> – E – <strong>F♯</strong> – G♯ – A♯</p>
   <p>It includes the root (B), major third (D♯), and perfect fifth (F♯), giving it a bright, full, and powerful sound.</p>
@@ -324,7 +325,6 @@ export const chords = {
       {
         notes: [14, 18, 27, 28, 29],
         note_names: ["", "B", "F♯", "B", "D♯", "F♯"],
-        root: 16,
         fingers: {
           14: 1,
           18: 1,
@@ -334,11 +334,11 @@ export const chords = {
         },
         muted: [1],
         first_fret: 1,
+        root: [14, 28],
       },
       {
         notes: [7, 11, 12, 16, 20, 21],
         note_names: ["B", "F♯", "B", "D♯", "F♯", "B"],
-        root: 16,
         fingers: {
           7: 1,
           11: 1,
@@ -349,6 +349,7 @@ export const chords = {
         },
         muted: [],
         first_fret: 7,
+        root: [7, 12, 21],
       },
     ],
   },
@@ -356,7 +357,6 @@ export const chords = {
   B_minor: {
     chord_name: "B",
     chord_type: "min",
-
     description: `<p>The <strong>B minor</strong> chord is built from the B natural minor scale:</p>
   <p style="font-weight: bold; text-align: center;">B – <strong>C♯</strong> – <strong>D</strong> – E – <strong>F♯</strong> – G – A</p>
   <p>It contains the root (B), minor third (D), and perfect fifth (F♯), giving it a somber, emotional quality compared to its major counterpart.</p>
@@ -364,8 +364,7 @@ export const chords = {
     variations: [
       {
         notes: [14, 18, 23, 27, 28],
-        note_names: ["", "B", "F♯", "B", "D", "E"],
-        root: 16,
+        note_names: ["", "B", "F♯", "B", "D", "F♯"],
         fingers: {
           14: 1,
           18: 1,
@@ -375,6 +374,7 @@ export const chords = {
         },
         muted: [1],
         first_fret: 1,
+        root: [14, 28],
       },
       {
         notes: [7, 10, 11, 12, 20, 21],
@@ -382,6 +382,7 @@ export const chords = {
         fingers: { 7: 1, 10: 1, 11: 1, 12: 1, 20: 3, 21: 4 },
         muted: [],
         first_fret: 7,
+        root: [7, 12, 21],
       },
     ],
   },
@@ -397,7 +398,6 @@ export const chords = {
       {
         notes: [1, 5, 9, 14, 16, 18],
         note_names: ["E", "B", "D♯", "A", "B", "F♯"],
-        root: 16,
         fingers: {
           9: 1,
           14: 2,
@@ -406,6 +406,7 @@ export const chords = {
         },
         muted: [],
         first_fret: 1,
+        root: [5, 14],
       },
     ],
   },
@@ -421,7 +422,6 @@ export const chords = {
       {
         notes: [14, 21, 23, 28],
         note_names: ["", "B", "F", "B", "D", ""],
-        root: 16,
         fingers: {
           14: 1,
           21: 2,
@@ -430,6 +430,7 @@ export const chords = {
         },
         muted: [1, 6],
         first_fret: 1,
+        root: [14, 28],
       },
     ],
   },
@@ -445,7 +446,6 @@ export const chords = {
       {
         notes: [4, 6, 11, 15, 20],
         note_names: ["", "C", "E", "G", "C", "E"],
-        root: 16,
         fingers: {
           11: 1,
           15: 2,
@@ -453,11 +453,11 @@ export const chords = {
         },
         muted: [1],
         first_fret: 1,
+        root: [11, 20],
       },
       {
         notes: [4, 6, 11, 15, 19, 20],
         note_names: ["G", "C", "E", "G", "C", "E"],
-        root: 16,
         fingers: {
           11: 1,
           15: 2,
@@ -466,11 +466,11 @@ export const chords = {
         },
         muted: [],
         first_fret: 1,
+        root: [11, 20],
       },
       {
         notes: [4, 6, 11, 15, 20, 24],
         note_names: ["", "C", "E", "G", "C", "G"],
-        root: 16,
         fingers: {
           11: 1,
           15: 2,
@@ -479,11 +479,11 @@ export const chords = {
         },
         muted: [1],
         first_fret: 1,
+        root: [11, 20],
       },
       {
         notes: [7, 11, 12, 16, 20, 21],
         note_names: ["C", "G", "C", "B", "G", "C"],
-        root: 16,
         fingers: {
           7: 1,
           11: 1,
@@ -494,6 +494,7 @@ export const chords = {
         },
         muted: [],
         first_fret: 8,
+        root: [7, 12, 21],
       },
     ],
   },
@@ -501,7 +502,6 @@ export const chords = {
   C_minor: {
     chord_name: "C",
     chord_type: "min",
-
     description: `<p>The <strong>C minor</strong> chord is built from the C natural minor scale:</p>
   <p style="font-weight: bold; text-align: center;">C – <strong>D</strong> – <strong>E♭</strong> – F – <strong>G</strong> – A♭ – B♭</p>
   <p>It contains the root (C), minor third (E♭), and perfect fifth (G), giving it a rich, dark, and expressive tone.</p>
@@ -509,8 +509,7 @@ export const chords = {
     variations: [
       {
         notes: [20, 24, 29, 33, 34],
-        note_names: ["", "C", "G", "C", "D♯", "G"],
-        root: 16,
+        note_names: ["", "C", "G", "C", "E♭", "G"],
         fingers: {
           20: 1,
           24: 1,
@@ -520,13 +519,15 @@ export const chords = {
         },
         muted: [1],
         first_fret: 1,
+        root: [20, 34],
       },
       {
         notes: [7, 10, 11, 12, 20, 21],
-        note_names: ["C", "G", "C", "D♯", "G", "C"],
+        note_names: ["C", "G", "C", "E♭", "G", "C"],
         fingers: { 7: 1, 10: 1, 11: 1, 12: 1, 20: 3, 21: 4 },
         muted: [],
         first_fret: 8,
+        root: [7, 12, 21],
       },
     ],
   },
@@ -542,7 +543,6 @@ export const chords = {
       {
         notes: [4, 6, 11, 15, 16, 20],
         note_names: ["", "C", "E", "A", "C", "E"],
-        root: 16,
         fingers: {
           11: 1,
           15: 2,
@@ -551,6 +551,7 @@ export const chords = {
         },
         muted: [1],
         first_fret: 1,
+        root: [11, 20],
       },
     ],
   },
@@ -566,7 +567,6 @@ export const chords = {
       {
         notes: [1, 4, 6, 11, 15, 20, 22],
         note_names: ["E", "C", "E", "B♭", "C", "E"],
-        root: 16,
         fingers: {
           11: 1,
           15: 2,
@@ -575,6 +575,7 @@ export const chords = {
         },
         muted: [],
         first_fret: 1,
+        root: [11, 20],
       },
     ],
   },
@@ -590,13 +591,13 @@ export const chords = {
       {
         notes: [4, 5, 6, 15, 20],
         note_names: ["", "C", "E", "G", "B", "E"],
-        root: 16,
         fingers: {
           15: 2,
           20: 3,
         },
         muted: [1],
         first_fret: 1,
+        root: [20],
       },
     ],
   },
@@ -611,7 +612,6 @@ export const chords = {
       {
         notes: [3, 4, 11, 20, 24],
         note_names: ["", "C", "D", "G", "C", "G"],
-        root: 16,
         fingers: {
           11: 1,
           20: 3,
@@ -619,6 +619,7 @@ export const chords = {
         },
         muted: [1],
         first_fret: 1,
+        root: [11, 20],
       },
     ],
   },
@@ -633,7 +634,6 @@ export const chords = {
       {
         notes: [4, 6, 15, 20, 23],
         note_names: ["", "C", "E", "G", "D", "E"],
-        root: 16,
         fingers: {
           15: 1,
           20: 2,
@@ -641,11 +641,11 @@ export const chords = {
         },
         muted: [1],
         first_fret: 1,
+        root: [20],
       },
       {
         notes: [4, 6, 15, 20, 23, 24],
         note_names: ["", "C", "E", "G", "D", "G"],
-        root: 16,
         fingers: {
           15: 1,
           20: 2,
@@ -654,6 +654,7 @@ export const chords = {
         },
         muted: [1],
         first_fret: 1,
+        root: [20],
       },
     ],
   },
@@ -669,7 +670,6 @@ export const chords = {
       {
         notes: [4, 11, 12, 15, 20],
         note_names: ["", "C", "E", "G", "C", "F"],
-        root: 16,
         fingers: {
           11: 1,
           12: 1,
@@ -678,19 +678,7 @@ export const chords = {
         },
         muted: [1],
         first_fret: 1,
-      },
-      {
-        notes: [4, 11, 12, 15, 20],
-        note_names: ["", "C", "E", "G", "C", "F"],
-        root: 16,
-        fingers: {
-          11: 1,
-          12: 1,
-          15: 2,
-          20: 3,
-        },
-        muted: [1],
-        first_fret: 1,
+        root: [11, 20],
       },
     ],
   },
@@ -706,7 +694,6 @@ export const chords = {
       {
         notes: [3, 16, 18, 23],
         note_names: ["", "", "D", "A", "D", "F♯"],
-        root: 16,
         fingers: {
           16: 1,
           18: 2,
@@ -714,11 +701,11 @@ export const chords = {
         },
         muted: [1, 2],
         first_fret: 1,
+        root: [3, 23],
       },
       {
         notes: [7, 11, 12, 16, 20, 21],
         note_names: ["D", "A", "D", "F♯", "A", "D"],
-        root: 16,
         fingers: {
           7: 1,
           11: 1,
@@ -729,6 +716,7 @@ export const chords = {
         },
         muted: [],
         first_fret: 10,
+        root: [7, 12, 21],
       },
     ],
   },
@@ -744,7 +732,6 @@ export const chords = {
       {
         notes: [3, 16, 12, 23],
         note_names: ["", "", "D", "A", "D", "F"],
-        root: 16,
         fingers: {
           12: 1,
           16: 2,
@@ -752,6 +739,7 @@ export const chords = {
         },
         muted: [1, 2],
         first_fret: 1,
+        root: [3, 23],
       },
       {
         notes: [7, 10, 11, 12, 20, 21],
@@ -759,6 +747,7 @@ export const chords = {
         fingers: { 7: 1, 10: 1, 11: 1, 12: 1, 20: 3, 21: 4 },
         muted: [],
         first_fret: 10,
+        root: [7, 12, 21],
       },
     ],
   },
@@ -772,17 +761,16 @@ export const chords = {
         <p>You’ll find it in jazz, classical, and cinematic music.</p>`,
     variations: [
       {
-        notes: [8, 15, 17, 22],
-        note_names: ["", "A♯", "E", "A♯", "C♯", "E"],
-        root: 15,
+        notes: [3, 10, 12, 23],
+        note_names: ["", "", "D", "A♭", "D", "F"],
         fingers: {
-          8: 1,
-          15: 2,
-          17: 3,
-          22: 4,
+          10: 1,
+          12: 1,
+          23: 2,
         },
-        muted: [1, 6],
+        muted: [1, 2],
         first_fret: 1,
+        root: [3],
       },
     ],
   },
@@ -796,17 +784,16 @@ export const chords = {
         <p>Often used in jazz and progressive styles for harmonic color.</p>`,
     variations: [
       {
-        notes: [18, 22, 23, 27],
-        note_names: ["", "", "F", "A♯", "D", "F♯"],
-        root: 16,
+        notes: [3, 18, 22, 23],
+        note_names: ["", "", "D", "A♯", "D", "F♯"],
         fingers: {
           18: 1,
           22: 2,
           23: 3,
-          27: 4,
         },
         muted: [1, 2],
         first_fret: 1,
+        root: [3, 23],
       },
     ],
   },
@@ -822,13 +809,13 @@ export const chords = {
       {
         notes: [3, 6, 16, 23],
         note_names: ["", "", "D", "A", "D", "E"],
-        root: 14,
         fingers: {
           16: 1,
           23: 2,
         },
         muted: [1, 2],
         first_fret: 1,
+        root: [3, 23],
       },
     ],
   },
@@ -847,7 +834,6 @@ export const chords = {
       {
         notes: [3, 16, 23, 24],
         note_names: ["", "", "D", "A", "D", "G"],
-        root: 16,
         fingers: {
           16: 1,
           23: 2,
@@ -855,6 +841,7 @@ export const chords = {
         },
         muted: [1, 2],
         first_fret: 1,
+        root: [3, 23],
       },
     ],
   },
@@ -869,7 +856,6 @@ export const chords = {
       {
         notes: [1, 5, 6, 10, 14, 15],
         note_names: ["E", "B", "E", "G♯", "B", "E"],
-        root: 16,
         fingers: {
           10: 1,
           14: 2,
@@ -877,6 +863,7 @@ export const chords = {
         },
         muted: [],
         first_fret: 1,
+        root: [1, 6, 15],
       },
     ],
   },
@@ -884,7 +871,6 @@ export const chords = {
   E_minor: {
     chord_name: "E",
     chord_type: "min",
-
     description: `<p>The <strong>E minor</strong> chord is built from the E natural minor scale:</p>
   <p style="font-weight: bold; text-align: center;">E – <strong>F♯</strong> – <strong>G</strong> – A – <strong>B</strong> – C – D</p>
   <p>It includes the root (E), minor third (G), and perfect fifth (B), giving it a dark, mellow, and expressive sound.</p>
@@ -893,20 +879,19 @@ export const chords = {
       {
         notes: [1, 4, 5, 6, 14, 15],
         note_names: ["E", "B", "E", "G", "B", "E"],
-        root: 16,
         fingers: {
           14: 2,
           15: 3,
         },
         muted: [],
         first_fret: 1,
+        root: [1, 6, 15],
       },
     ],
   },
   E_7: {
     chord_name: "E",
     chord_type: "7",
-
     description: `<p>The <strong>E7</strong> chord, or E dominant seventh, is formed by adding a minor seventh to the E major triad:</p>
   <p style="font-weight: bold; text-align: center;">E – <strong>G♯</strong> – <strong>B</strong> – C♯ – D♯ – F♯ – <strong>D</strong></p>
   <p>It includes the root (E), major third (G♯), perfect fifth (B), and minor seventh (D), producing a bright, slightly bluesy tension that wants to resolve.</p>
@@ -915,13 +900,13 @@ export const chords = {
       {
         notes: [1, 3, 5, 6, 10, 14],
         note_names: ["E", "B", "D", "G♯", "B", "E"],
-        root: 16,
         fingers: {
           10: 1,
           14: 2,
         },
         muted: [],
         first_fret: 1,
+        root: [1, 6],
       },
     ],
   },
@@ -929,16 +914,14 @@ export const chords = {
   E_m7: {
     chord_name: "E",
     chord_type: "m7",
-
     description: `<p>The <strong>Em7</strong> chord, or E minor seventh, is built from the E natural minor scale and adds a minor seventh interval to the standard E minor chord:</p>
   <p style="font-weight: bold; text-align: center;">E – <strong>F♯</strong> – <strong>G</strong> – A – <strong>B</strong> – C – <strong>D</strong></p>
   <p>It includes the root (E), minor third (G), perfect fifth (B), and minor seventh (D), producing a warm, mellow, and slightly jazzy tone.</p>
   <p>Em7 is widely used in acoustic, soul, jazz, and lo-fi music, offering a laid-back emotional color that fits beautifully in both minor and modal progressions.</p>`,
     variations: [
       {
-        notes: [1, 4, 5, 6, 14, 15, 23],
+        notes: [1, 4, 6, 14, 15, 23],
         note_names: ["E", "B", "E", "G", "D", "E"],
-        root: 16,
         fingers: {
           14: 1,
           15: 2,
@@ -946,6 +929,28 @@ export const chords = {
         },
         muted: [],
         first_fret: 1,
+        root: [1, 6, 15],
+      },
+    ],
+  },
+  E_dim: {
+    chord_name: "E",
+    chord_type: "dim",
+    description: `<p>The <strong>E diminished</strong> chord is formed by lowering the third and fifth of the E major chord, creating a tense and unstable harmony:</p>
+  <p style="font-weight: bold; text-align: center;">E – <strong>G</strong> – <strong>B♭</strong> – C – D – F – G♯</p>
+  <p>It includes the root (E), minor third (G), and diminished fifth (B♭), producing a dissonant sound that wants to resolve — often upward by a half step.</p>
+  <p>Edim is commonly used in classical, jazz, and cinematic music to build tension and lead into more stable chords, especially in transitional moments within progressions.</p>`,
+    variations: [
+      {
+        notes: [1, 4, 8, 15],
+        note_names: ["E", "B♭", "E", "G", "", ""],
+        fingers: {
+          8: 2,
+          15: 3,
+        },
+        muted: [5, 6],
+        first_fret: 1,
+        root: [1, 15],
       },
     ],
   },
@@ -961,7 +966,6 @@ export const chords = {
       {
         notes: [7, 11, 12, 16, 20, 21],
         note_names: ["F", "C", "F", "A", "C", "F"],
-        root: 16,
         fingers: {
           7: 1,
           11: 1,
@@ -972,11 +976,11 @@ export const chords = {
         },
         muted: [],
         first_fret: 1,
+        root: [7, 12, 21],
       },
       {
         notes: [11, 12, 16, 21],
         note_names: ["", "", "F", "A", "C", "F"],
-        root: 16,
         fingers: {
           11: 1,
           12: 1,
@@ -985,11 +989,11 @@ export const chords = {
         },
         muted: [1, 2],
         first_fret: 1,
+        root: [12, 21],
       },
       {
         notes: [9, 22, 24, 29],
         note_names: ["", "", "F", "C", "F", "A"],
-        root: 16,
         fingers: {
           9: 1,
           22: 2,
@@ -998,11 +1002,11 @@ export const chords = {
         },
         muted: [1, 2],
         first_fret: 3,
+        root: [9, 29],
       },
       {
         notes: [10, 12, 17, 21],
         note_names: ["", "", "A", "C", "F", "A"],
-        root: 16,
         fingers: {
           10: 1,
           12: 1,
@@ -1011,6 +1015,7 @@ export const chords = {
         },
         muted: [1, 2],
         first_fret: 5,
+        root: [17],
       },
     ],
   },
@@ -1026,7 +1031,6 @@ export const chords = {
       {
         notes: [7, 10, 11, 12, 20, 21],
         note_names: ["F", "C", "F", "A♭", "C", "F"],
-        root: 16,
         fingers: {
           7: 1,
           10: 1,
@@ -1037,6 +1041,7 @@ export const chords = {
         },
         muted: [],
         first_fret: 1,
+        root: [7, 12, 21],
       },
     ],
   },
@@ -1044,7 +1049,6 @@ export const chords = {
   F_maj7: {
     chord_name: "F",
     chord_type: "maj7",
-
     description: `<p>The <strong>Fmaj7</strong> chord, or F major seventh, is built from the F major scale and adds a major seventh interval to the basic F major triad:</p>
   <p style="font-weight: bold; text-align: center;">F – <strong>A</strong> – <strong>C</strong> – D – E – G – <strong>E</strong></p>
   <p>It includes the root (F), major third (A), perfect fifth (C), and major seventh (E), creating a smooth, rich, and sophisticated sound.</p>
@@ -1053,7 +1057,6 @@ export const chords = {
       {
         notes: [6, 11, 16, 21],
         note_names: ["", "", "F", "A", "C", "E"],
-        root: 16,
         fingers: {
           11: 1,
           16: 2,
@@ -1061,6 +1064,7 @@ export const chords = {
         },
         muted: [1, 2],
         first_fret: 1,
+        root: [21],
       },
     ],
   },
@@ -1076,7 +1080,6 @@ export const chords = {
       {
         notes: [3, 4, 5, 14, 19, 24],
         note_names: ["G", "B", "D", "G", "B", "G"],
-        root: 16,
         fingers: {
           14: 1,
           19: 2,
@@ -1084,11 +1087,11 @@ export const chords = {
         },
         muted: [],
         first_fret: 1,
+        root: [4, 19, 24],
       },
       {
         notes: [7, 11, 12, 16, 20, 21],
         note_names: ["G", "D", "G", "B", "D", "G"],
-        root: 16,
         fingers: {
           7: 1,
           11: 1,
@@ -1099,6 +1102,7 @@ export const chords = {
         },
         muted: [],
         first_fret: 3,
+        root: [7, 12, 21],
       },
     ],
   },
@@ -1114,7 +1118,6 @@ export const chords = {
       {
         notes: [19, 22, 23, 24, 32, 33],
         note_names: ["G", "D", "G", "B♭", "D", "G"],
-        root: 16,
         fingers: {
           19: 1,
           22: 1,
@@ -1125,6 +1128,7 @@ export const chords = {
         },
         muted: [],
         first_fret: 1,
+        root: [19, 24, 33],
       },
     ],
   },
@@ -1140,7 +1144,6 @@ export const chords = {
       {
         notes: [3, 4, 5, 12, 14, 19],
         note_names: ["G", "B", "D", "G", "B", "F"],
-        root: 16,
         fingers: {
           12: 1,
           14: 2,
@@ -1148,6 +1151,7 @@ export const chords = {
         },
         muted: [],
         first_fret: 1,
+        root: [4, 19],
       },
     ],
   },
@@ -1163,7 +1167,6 @@ export const chords = {
       {
         notes: [3, 4, 11, 14, 19, 24],
         note_names: ["G", "B", "D", "G", "C", "G"],
-        root: 16,
         fingers: {
           11: 1,
           14: 2,
@@ -1172,6 +1175,7 @@ export const chords = {
         },
         muted: [],
         first_fret: 1,
+        root: [4, 19],
       },
     ],
   },
