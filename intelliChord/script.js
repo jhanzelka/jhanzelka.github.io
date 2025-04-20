@@ -18,7 +18,7 @@ let currentChord = "";
 let var_num = 0;
 
 // initialize ui
-createChord(chords["A_major"]);
+createChord(chords["A_maj"]);
 configureNotesSelectionUI();
 getChordTypes("A");
 setShapeVariationNumber();
@@ -26,7 +26,8 @@ setShapeVariationNumber();
 // event listeners for change of chord
 chord_noteEl.addEventListener("change", () => {
   var_num = 0;
-  const chord_name_value = chord_noteEl.value;
+  let chord_name_value = chord_noteEl.value;
+  chord_name_value = chord_name_value.replaceAll("♯", "shrp");
   getChordTypes(chord_name_value);
   const chord_type_value = chord_typeEl.value;
   const newValue = `${chord_name_value}_${chord_type_value}`;
@@ -65,7 +66,7 @@ function configureNotesSelectionUI() {
   const typesOfNotes = availableChords.notes;
   typesOfNotes.forEach((typeOfNote) => {
     const newOption = document.createElement("option");
-    newOption.innerText = typeOfNote;
+    newOption.innerText = typeOfNote.replaceAll("shrp", "♯");
     chord_noteEl.appendChild(newOption);
   });
 }
@@ -75,7 +76,8 @@ function parseChords(chords) {
   const noteTypeMap = {};
 
   for (const key of Object.keys(chords)) {
-    const [note, type] = key.split("_");
+    const note = chords[key].chord_name.replaceAll("♯", "shrp");
+    const type = chords[key].chord_type;
 
     // Add note to the set
     noteSet.add(note);

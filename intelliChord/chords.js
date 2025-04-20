@@ -1,5 +1,5 @@
 export const chords = {
-  A_major: {
+  A_maj: {
     chord_name: "A",
     chord_type: "maj",
     description: `<p>The <strong>A major</strong> chord is built from the A major scale, consisting of the notes:</p>
@@ -26,7 +26,7 @@ export const chords = {
     ],
   },
 
-  A_minor: {
+  A_min: {
     chord_name: "A",
     chord_type: "min",
     description: `<p>The <strong>A minor</strong> chord uses the natural minor scale:</p>
@@ -314,7 +314,7 @@ export const chords = {
     ],
   },
 
-  B_major: {
+  B_maj: {
     chord_name: "B",
     chord_type: "maj",
     description: `<p>The <strong>B major</strong> chord is built from the B major scale:</p>
@@ -354,7 +354,7 @@ export const chords = {
     ],
   },
 
-  B_minor: {
+  B_min: {
     chord_name: "B",
     chord_type: "min",
     description: `<p>The <strong>B minor</strong> chord is built from the B natural minor scale:</p>
@@ -435,7 +435,7 @@ export const chords = {
     ],
   },
 
-  C_major: {
+  C_maj: {
     chord_name: "C",
     chord_type: "maj",
     description: `<p>The <strong>C major</strong> chord is built from the C major scale, which contains no sharps or flats:</p>
@@ -499,7 +499,7 @@ export const chords = {
     ],
   },
 
-  C_minor: {
+  C_min: {
     chord_name: "C",
     chord_type: "min",
     description: `<p>The <strong>C minor</strong> chord is built from the C natural minor scale:</p>
@@ -683,7 +683,7 @@ export const chords = {
     ],
   },
 
-  D_major: {
+  D_maj: {
     chord_name: "D",
     chord_type: "maj",
     description: `<p>The <strong>D major</strong> chord is built from the D major scale:</p>
@@ -721,7 +721,7 @@ export const chords = {
     ],
   },
 
-  D_minor: {
+  D_min: {
     chord_name: "D",
     chord_type: "min",
     description: `<p>The <strong>D minor</strong> chord is made by lowering the third of D major (F♯ to F).</p>
@@ -845,7 +845,7 @@ export const chords = {
       },
     ],
   },
-  E_major: {
+  E_maj: {
     chord_name: "E",
     chord_type: "maj",
     description: `<p>The <strong>E major</strong> chord is based on the E major scale:</p>
@@ -868,7 +868,7 @@ export const chords = {
     ],
   },
 
-  E_minor: {
+  E_min: {
     chord_name: "E",
     chord_type: "min",
     description: `<p>The <strong>E minor</strong> chord is built from the E natural minor scale:</p>
@@ -955,7 +955,7 @@ export const chords = {
     ],
   },
 
-  F_major: {
+  F_maj: {
     chord_name: "F",
     chord_type: "maj",
     description: `<p>The <strong>F major</strong> chord is built from the F major scale:</p>
@@ -1020,7 +1020,7 @@ export const chords = {
     ],
   },
 
-  F_minor: {
+  F_min: {
     chord_name: "F",
     chord_type: "min",
     description: `<p>The <strong>F minor</strong> chord is built from the F natural minor scale:</p>
@@ -1069,7 +1069,31 @@ export const chords = {
     ],
   },
 
-  G_major: {
+  Fshrp_dim: {
+    chord_name: "F♯",
+    chord_type: "dim",
+    description: `<p>The <strong>F♯ diminished</strong> chord is built by lowering the third and fifth of the F♯ major chord, resulting in a tense, dissonant sound that craves resolution:</p>
+  <p style="font-weight: bold; text-align: center;">F♯ – <strong>A</strong> – <strong>C</strong> – D – E – G – A♯</p>
+  <p>It contains the root (F♯), minor third (A), and diminished fifth (C), which together create a compact and unstable harmonic structure.</p>
+  <p>F♯dim is often used as a passing or transitional chord in classical, jazz, and film music, typically resolving upward by a half step to G major or G minor.</p>`,
+    variations: [
+      {
+        notes: [13, 16, 20, 27],
+        note_names: ["F♯", "C", "F♯", "A", "", ""],
+        fingers: {
+          13: 1,
+          16: 1,
+          20: 2,
+          27: 3,
+        },
+        muted: [5, 6],
+        first_fret: 1,
+        root: [13, 27],
+      },
+    ],
+  },
+
+  G_maj: {
     chord_name: "G",
     chord_type: "maj",
     description: `<p>The <strong>G major</strong> chord is built from the G major scale:</p>
@@ -1107,7 +1131,7 @@ export const chords = {
     ],
   },
 
-  G_minor: {
+  G_min: {
     chord_name: "G",
     chord_type: "min",
     description: `<p>The <strong>G minor</strong> chord is built from the G natural minor scale:</p>
