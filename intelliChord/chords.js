@@ -623,6 +623,29 @@ export const chords = {
       },
     ],
   },
+
+  C_sus4: {
+    chord_name: "C",
+    chord_type: "sus4",
+    description: `<p>The <strong>Csus4</strong> chord is a suspended chord where the major third (E) in a C major triad is replaced by the perfect fourth (F), creating a sound that feels tense and unresolved:</p>
+  <p style="font-weight: bold; text-align: center;">C – D – <strong>F</strong> – G – A – B</p>
+  <p>It includes the root (C), perfect fourth (F), and perfect fifth (G), leaving out the third to remove the major or minor quality.</p>
+  <p>Csus4 is commonly used in pop, rock, and folk music to add movement or emotional anticipation, often resolving naturally back to C major.</p>`,
+    variations: [
+      {
+        notes: [4, 11, 20, 21],
+        note_names: ["", "C", "F", "G", "C", ""],
+        fingers: {
+          11: 1,
+          20: 3,
+          21: 4,
+        },
+        muted: [1, 6],
+        first_fret: 1,
+        root: [11, 20],
+      },
+    ],
+  },
   C_add9: {
     chord_name: "C",
     chord_type: "add9",

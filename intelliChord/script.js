@@ -136,7 +136,7 @@ function createChord(chord) {
   const activeIds = chord.variations[var_num].notes.map((id) => id.toString());
   const muted = chord.variations[var_num].muted.map((id) => id.toString());
   //set chord name header
-  chord_nameEl.innerHTML = `${chord_name}${chord_type}`;
+  chord_nameEl.innerHTML = `${chord_name}<small>${chord_type}</small>`;
 
   // Assign description text
   const descriptionEl = document.createElement("p");

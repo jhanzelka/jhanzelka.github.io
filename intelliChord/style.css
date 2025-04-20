@@ -104,12 +104,16 @@ small {
   margin: 30px 0 10px 0;
 }
 
+.chord-name h1 {
+  transform: translateX(-12px);
+}
+
 .chord-name i {
   color: rgb(71, 123, 226);
   font-weight: 900;
   font-size: 20px;
   margin-right: 5px;
-  transform: translateY(-20px);
+  transform: translate(-5px, -20px);
   cursor: pointer;
 }
 
