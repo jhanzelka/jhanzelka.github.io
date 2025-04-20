@@ -165,7 +165,7 @@ export const chords = {
 
   A_7sus4: {
     chord_name: "A",
-    chord_type: `7<small>sus4</small>`,
+    chord_type: `7sus4`,
     description: `<p>The <strong>A7sus4</strong> chord is a variation of the A7 chord where the major third (C♯) is replaced by the perfect fourth (D), creating a suspended, unresolved feel:</p>
   <p style="font-weight: bold; text-align: center;">A – <strong>D</strong> – <strong>E</strong> – F♯ – G♯ – B – <strong>G</strong></p>
   <p>It includes the root (A), perfect fourth (D), perfect fifth (E), and minor seventh (G), giving it a suspended, tense sound that typically resolves back to A7 or A major.</p>
@@ -278,7 +278,7 @@ export const chords = {
 
   A_add9: {
     chord_name: "A",
-    chord_type: "<small>add9</small>",
+    chord_type: "add9",
     description: `<p>The <strong>Aadd9</strong> chord is based on the A major triad with an added ninth (B), creating a bright and modern sound without altering the chord's core structure:</p>
   <p style="font-weight: bold; text-align: center;">A – <strong>B</strong> – <strong>C♯</strong> – D – <strong>E</strong> – F♯ – G♯</p>
   <p>It includes the root (A), major third (C♯), perfect fifth (E), and added ninth (B), offering extra melodic color while maintaining the stability of a major chord.</p>
@@ -1182,7 +1182,7 @@ export const chords = {
 
   G_add11: {
     chord_name: "G",
-    chord_type: "<small>add11</small>",
+    chord_type: "add11",
     description: `<p>The <strong>Gadd11</strong> chord is based on a standard G major chord with an added 11th (the note C) without altering the third or seventh:</p>
   <p style="font-weight: bold; text-align: center;">G – <strong>B</strong> – <strong>D</strong> – E – <strong>C</strong> – F♯ – A</p>
   <p>It includes the root (G), major third (B), perfect fifth (D), and an added 11th (C), creating a rich, slightly suspended sound while keeping the major quality intact.</p>

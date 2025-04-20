@@ -28,6 +28,7 @@ chord_noteEl.addEventListener("change", () => {
   var_num = 0;
   let chord_name_value = chord_noteEl.value;
   chord_name_value = chord_name_value.replaceAll("♯", "shrp");
+
   getChordTypes(chord_name_value);
   const chord_type_value = chord_typeEl.value;
   const newValue = `${chord_name_value}_${chord_type_value}`;
