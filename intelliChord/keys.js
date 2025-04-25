@@ -122,11 +122,13 @@ configureKeySelectionUI();
 left_btn.addEventListener("click", () => {
   rotate(-1);
   key_selectEl.value = majorKeys[rotationIndex];
+  progression_selectEl.value = "Full Scale";
 });
 
 right_btn.addEventListener("click", () => {
   rotate(1);
   key_selectEl.value = majorKeys[rotationIndex];
+  progression_selectEl.value = "Full Scale";
 });
 
 key_selectEl.addEventListener("change", (e) => {
@@ -134,6 +136,7 @@ key_selectEl.addEventListener("change", (e) => {
   const index = majorKeys.indexOf(key_name_value);
   rotationIndex = index;
   renderCircle();
+  progression_selectEl.value = "Full Scale";
 });
 
 progression_selectEl.addEventListener("change", () => {
