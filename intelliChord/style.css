@@ -8,6 +8,7 @@
 
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -20,6 +21,39 @@ body {
   height: 100vh;
   margin: 0;
 }
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.5) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.6) 0px 8px 16px -8px;
+}
+
+.navbar-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 20px;
+  color: #999;
+  cursor: pointer;
+}
+
+.navbar-link:hover {
+  color: rgb(71, 123, 226);
+}
+
+.navbar-link i {
+  font-size: 30px;
+}
+
+/* End of Navbar */
 
 /* drop-down select menu styling */
 .ctrl-container {
@@ -35,7 +69,15 @@ body {
   margin: 0 5px;
 }
 
-.custom-select-wrapper select {
+.progression-select-wrapper {
+  position: relative;
+  display: flex;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.custom-select-wrapper select,
+.progression-select-wrapper select {
   background-color: #fff;
   appearance: none;
   width: 100%;
@@ -47,7 +89,21 @@ body {
   cursor: pointer;
 }
 
-.custom-select-wrapper i {
+.custom-select-wrapper select,
+.progression-select-wrapper select {
+  background-color: #fff;
+  appearance: none;
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  font-size: 16px;
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.custom-select-wrapper i,
+.progression-select-wrapper i {
   position: absolute;
   right: 15px;
   top: 50%;
@@ -398,6 +454,289 @@ small {
   background-color: #f0f0f0;
   border-radius: 10px;
 }
+
+/* Begin Keys Page */
+
+.keys-ui-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0 40px 0;
+}
+
+.left-btn,
+.right-btn {
+  background-color: #fff;
+  border: none;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.left-btn:active,
+.right-btn:active {
+  transform: scale(0.98);
+}
+
+.left-btn i,
+.right-btn i {
+  font-size: 30px;
+}
+
+.circle-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+}
+
+.line {
+  position: absolute;
+  height: 100%;
+  width: 1.5px;
+  background-color: #e1e1e1;
+  z-index: 4;
+}
+
+.circle-bg-large,
+.circle-bg-small,
+.circle-bg-medium {
+  position: absolute;
+  border-radius: 50%;
+  /* background-image: conic-gradient(
+    #e3f0d8 0deg 15deg,
+    #fffadd 15deg 45deg,
+    #fdde98 45deg 75deg,
+    #fce1c5 75deg 105deg,
+    #f8c9a2 105deg 135deg,
+    #f2c6ce 135deg 165deg,
+    #b79abd 165deg 195deg,
+    #879bc2 195deg 225deg,
+    #b7dfeb 225deg 255deg,
+    #c2e1d5 255deg 285deg,
+    #c2d69f 285deg 315deg,
+    #d8e9c4 315deg 345deg,
+    #e3f0d8 345deg 360deg
+  );*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.circle-bg-small {
+  background-image: conic-gradient(
+    rgb(71, 123, 226) 0deg 15deg,
+    #fff 15deg 345deg,
+    rgb(71, 123, 226) 345deg 360deg
+  );
+}
+.circle-bg-large,
+.circle-bg-medium {
+  background-image: conic-gradient(
+    rgb(71, 123, 226) 0deg 45deg,
+    #fff 45deg 315deg,
+    rgb(71, 123, 226) 315deg 360deg
+  );
+}
+
+.circle-bg-large {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.circle-bg-medium {
+  width: 75%;
+  height: 75%;
+  z-index: 2;
+}
+.circle-bg-small {
+  width: 48%;
+  height: 48%;
+  z-index: 3;
+}
+
+.circle-bg-middle {
+  position: absolute;
+  background-color: #fff;
+  border: 2px solid #e1e1e1;
+  border-radius: 50%;
+  width: 25%;
+  height: 25%;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+
+.circle-text {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  transition: transform 0.5s;
+}
+
+.major-wedge,
+.minor-wedge,
+.dimminished-wedge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 30px;
+  transform-origin: center;
+  top: 50%;
+  left: 50%;
+  z-index: 11;
+  transition: transform 0.3s;
+}
+
+.major-wedge {
+  font-size: 25px;
+  font-weight: 700;
+  transform: translateY(-150px);
+}
+
+.minor-wedge {
+  font-size: 18px;
+}
+
+.major-wedge.active,
+.minor-wedge.active,
+.dimminished-wedge.active {
+  color: #fff;
+}
+
+.major-wedge::before,
+.minor-wedge::before,
+.dimminished-wedge::before {
+  position: absolute;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+/* Positional tweaks by type */
+.major-wedge::before {
+  top: 27px;
+}
+.minor-wedge::before {
+  top: 25px;
+}
+.dimminished-wedge::before {
+  top: 22px;
+}
+
+/* Roman numeral content by function */
+.one-chord::before {
+  content: "I";
+}
+.two-chord::before {
+  content: "ii";
+}
+.three-chord::before {
+  content: "iii";
+}
+.four-chord::before {
+  content: "IV";
+}
+.five-chord::before {
+  content: "V";
+}
+.six-chord::before {
+  content: "vi";
+}
+.seven-chord::before {
+  content: "vii";
+}
+
+.progression-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.progression-select-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.keyNotes-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.keyNote {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0 12px;
+  position: relative;
+}
+
+.keyNote::before {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: 200;
+  transform: translate(-50%);
+}
+
+.keyNote-1::before {
+  content: "I";
+}
+.keyNote-2::before {
+  content: "ii";
+}
+.keyNote-3::before {
+  content: "iii";
+}
+.keyNote-4::before {
+  content: "IV";
+}
+
+.keyNote-5::before {
+  content: "V";
+}
+
+.keyNote-6::before {
+  content: "vi";
+}
+
+.keyNote-7::before {
+  content: "vii";
+}
+
+.progression-select-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.selected-progression-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.progression-description-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  width: 100%;
+}
+
+.progression-description {
+  font-size: 14px;
+  width: 50%;
+}
+
+/* End Keys Page */
 
 @media (max-width: 375px) {
   :root {
