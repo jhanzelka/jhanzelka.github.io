@@ -676,7 +676,6 @@ small {
 .keyNote {
   font-size: 25px;
   font-weight: 700;
-  margin: 0 10px;
   position: relative;
 }
 
@@ -723,8 +722,9 @@ small {
 
 .selected-progression-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 10px 0;
+  padding: 0;
 }
 
 .progression-description-container {
