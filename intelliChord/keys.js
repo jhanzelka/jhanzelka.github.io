@@ -139,6 +139,10 @@ key_selectEl.addEventListener("change", (e) => {
   progression_selectEl.value = "Full Scale";
 });
 
+window.addEventListener("resize", () => {
+  renderCircle();
+});
+
 progression_selectEl.addEventListener("change", () => {
   const targetName = progression_selectEl.value;
 
@@ -179,23 +183,32 @@ function renderCircle() {
     // major wedges
     const wedge = document.createElement("div");
     wedge.className = "major-wedge";
+    const width = circle_text.offsetWidth;
     if (angle === 0) {
       wedge.classList.add("active");
       wedge.classList.add("one-chord");
-      wedge.style.transform = `rotate(${angle}deg) translateY(-180px) rotate(-${angle}deg) translate(-50%, -50%)`;
+      wedge.style.transform = `rotate(${angle}deg) translateY(-${
+        width * 0.45
+      }px) rotate(-${angle}deg) translate(-50%, -50%)`;
       active_key[1] = key;
     } else if (angle === 30) {
       wedge.classList.add("active");
       wedge.classList.add("five-chord");
-      wedge.style.transform = `rotate(${angle}deg) translateY(-180px) rotate(-${angle}deg) translate(-50%, -50%)`;
+      wedge.style.transform = `rotate(${angle}deg) translateY(-${
+        width * 0.45
+      }px) rotate(-${angle}deg) translate(-50%, -50%)`;
       active_key[5] = key;
     } else if (angle === 330) {
       wedge.classList.add("active");
       wedge.classList.add("four-chord");
-      wedge.style.transform = `rotate(${angle}deg) translateY(-180px) rotate(-${angle}deg) translate(-50%, -50%)`;
+      wedge.style.transform = `rotate(${angle}deg) translateY(-${
+        width * 0.45
+      }px) rotate(-${angle}deg) translate(-50%, -50%)`;
       active_key[4] = key;
     } else {
-      wedge.style.transform = `rotate(${angle}deg) translateY(-175px) rotate(-${angle}deg) translate(-50%, -50%)`;
+      wedge.style.transform = `rotate(${angle}deg) translateY(-${
+        width * 0.4375
+      }px) rotate(-${angle}deg) translate(-50%, -50%)`;
     }
     wedge.innerText = key;
     circle_text.appendChild(wedge);
@@ -212,20 +225,28 @@ function renderCircle() {
     if (angle === 0) {
       minorWedge.classList.add("active");
       minorWedge.classList.add("six-chord");
-      minorWedge.style.transform = `rotate(${angle}deg) translateY(-130px) rotate(-${angle}deg) translate(-50%, -50%)`;
+      minorWedge.style.transform = `rotate(${angle}deg) translateY(-${
+        width * 0.325
+      }px) rotate(-${angle}deg) translate(-50%, -50%)`;
       active_key[6] = minorKeys[minorWedge_idx];
     } else if (angle === 30) {
       minorWedge.classList.add("active");
       minorWedge.classList.add("three-chord");
-      minorWedge.style.transform = `rotate(${angle}deg) translateY(-130px) rotate(-${angle}deg) translate(-50%, -50%)`;
+      minorWedge.style.transform = `rotate(${angle}deg) translateY(-${
+        width * 0.325
+      }px) rotate(-${angle}deg) translate(-50%, -50%)`;
       active_key[3] = minorKeys[minorWedge_idx];
     } else if (angle === 330) {
       minorWedge.classList.add("active");
       minorWedge.classList.add("two-chord");
-      minorWedge.style.transform = `rotate(${angle}deg) translateY(-130px) rotate(-${angle}deg) translate(-50%, -50%)`;
+      minorWedge.style.transform = `rotate(${angle}deg) translateY(-${
+        width * 0.325
+      }px) rotate(-${angle}deg) translate(-50%, -50%)`;
       active_key[2] = minorKeys[minorWedge_idx];
     } else {
-      minorWedge.style.transform = `rotate(${angle}deg) translateY(-125px) rotate(-${angle}deg) translate(-50%, -50%)`;
+      minorWedge.style.transform = `rotate(${angle}deg) translateY(-${
+        width * 0.3125
+      }px) rotate(-${angle}deg) translate(-50%, -50%)`;
     }
 
     minorWedge.innerText = minorKeys[minorWedge_idx];
@@ -243,7 +264,9 @@ function renderCircle() {
       dimminishedWedge.classList.add("seven-chord");
       active_key[7] = diminished_chords[dimminishedWedge_idx];
     }
-    dimminishedWedge.style.transform = `rotate(${angle}deg) translateY(-75px) rotate(-${angle}deg) translate(-50%, -50%)`;
+    dimminishedWedge.style.transform = `rotate(${angle}deg) translateY(-${
+      width * 0.1875
+    }px) rotate(-${angle}deg) translate(-50%, -50%)`;
 
     dimminishedWedge.innerText = diminished_chords[dimminishedWedge_idx];
     circle_text.appendChild(dimminishedWedge);

@@ -488,8 +488,10 @@ small {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 400px;
-  height: 400px;
+  width: 90vw;
+  max-width: 500px;
+  min-width: 300px;
+  aspect-ratio: 1 /1;
 }
 
 .line {
@@ -733,7 +735,7 @@ small {
 
 .progression-description {
   font-size: 14px;
-  width: 50%;
+  width: 75%;
 }
 
 /* End Keys Page */
